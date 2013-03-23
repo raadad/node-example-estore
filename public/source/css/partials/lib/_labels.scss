@@ -1,0 +1,39 @@
+// LABELS
+// ------
+
+// Base
+.label {
+  @include border-radius(50px);
+  padding: 1px 7px;
+  font-size: $baseFontSize * .85;
+  font-weight: bold;
+  color: $white;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.15);
+  background-color: $grayLight;
+  // Hover state
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+// Colors
+.label-important { 
+	background-color: $errorText;
+	&:hover { background-color: darken($errorText, 10%); }
+}
+
+.label-warning { 
+	background-color: $orange; 
+	&:hover { background-color: darken($orange, 10%); }
+}
+
+.label-success { 
+	background-color: $successText; 
+	&:hover { background-color: darken($successText, 10%); }
+}
+
+.label-info { 
+	background-color: $infoText;
+	&:hover { background-color: darken($infoText, 10%); }
+}

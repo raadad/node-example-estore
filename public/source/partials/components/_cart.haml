@@ -1,0 +1,110 @@
+.cart-info
+  .breadcrumb
+    %span.info Viewing page
+    %span.separator &raquo;
+    %span.active Your cart detail
+  .cart-subtotal
+    Subtotal
+    %span.price $145.25
+
+
+- productlist = Array.new
+- productlist[0] = {:title => 'Creative Polo Shirt', :price => 25, :quantity => 1 }
+- productlist[1] = {:title => 'Product name will be in here, dude', :price => 25, :quantity => 2 }
+- productlist[2] = {:title => 'Tea cup for family', :price => 175, :quantity => 2 }
+- productlist[3] = {:title => 'Product name will be in here, dude', :price => 25, :quantity => 2 }
+- productlist[4] = {:title => 'Last product name', :price => 25, :quantity => 2 }
+
+/ Start Shopping Cart Table
+%form{:action => "", :method => "post"}
+  %table.cart-table{:cellspacing => "0"}
+    %thead
+      %tr
+        %th
+        %th
+        %th Product Name
+        %th Unit Price
+        %th Quantity
+        %th Price
+    %tbody
+
+      - productlist.each do |product|
+        %tr
+          %td.product-remove
+            %a.remove{:href => "#"} &times;
+          %td.product-thumbnail
+            %a{:href => "#{}"}
+              %img{:src => "http://placehold.it/40&amp;color=#979797"}
+          %td.product-name
+            %a{:href => "#"}= product[:title]
+          %td.product-price
+            %span.amount= "$#{product[:price]}"
+          %td.product-quantity
+            .quantity
+              %input#minus1.minus{:type => "button", :value => "-"}
+              %input.input-text.qty.text{"data-max" => "0", "data-min" => "", :maxlength => "12", :size => "4", :title => "Qty", :value => product[:quantity]}
+              %input#add1.plus{:type => "button", :value => "+"}/
+          %td.product-subtotal
+            %span.amount= "$#{product[:price] * product[:quantity]}"
+
+
+      %tr
+        %td.actions{:colspan => "6"}
+          .coupon
+            %input#coupon_code.input-text{:name => "coupon_code", :value => ""}
+            %input.button.green{:name => "apply_coupon", :type => "submit", :value => "Apply Coupon"}
+
+          %input.btn{:name => "update_cart", :type => "submit", :value => "Update Shopping Cart"}
+          %a.checkout-button{:href => "#"} Proceed to Checkout
+/ /End Shopping Cart Table
+
+
+.cart-collaterals
+  .cart-totals
+    %h2 Cart Totals
+    %table{:cellpadding => "0", :cellspacing => "0"}
+      %tbody
+        %tr.cart-subtotal.alt-table-row
+          %th
+            %strong Cart Subtotal
+          %td
+            %strong
+              %span.amount £0
+        %tr.shipping
+          %th 
+            %strong Shipping
+            To The United Kingdom
+          %td
+            Free Shipping
+            %input#shipping_method{:name => "shipping_method", :type => "hidden", :value => "free_shipping"}/
+        %tr.total.alt-table-row
+          %th
+            %strong Order Total
+          %td
+            %strong
+              %span.amount £0
+    %p
+      %small Note: Shipping and taxes are estimated and will be updated during checkout based on your billing and shipping information.
+
+
+  %form.shipping-calculator{:action => "", :method => "post"}
+    %h2
+      %a.shipping-calculator-button{:href => "#"}
+        Calculate Shipping
+        %span ↓
+    %section.shipping-calculator-form
+      %p.form-row.form-row-first
+        %select#calc_shipping_country.country_to_state{:name => "calc_shipping_country", :rel => "calc_shipping_state"}
+          %option{:value => ""} Select a country…
+          %option{:value => "AF"} Afghanistan
+          %option{:value => "AX"} Aland Islands
+          %option{:value => "AL"} Albania
+
+      %p.form-row.form-row-last
+        %input#calc_shipping_state.input-text{:name => "calc_shipping_state", :placeholder => "state", :type => "text", :value => ""}
+      .clear
+      %p.form-row.form-row-wide
+        %input#calc_shipping_postcode.input-text{:name => "calc_shipping_postcode", :placeholder => "Postcode/Zip", :title => "Postcode", :type => "text", :value => " "}
+      .clear
+      %p
+        %button.button{:name => "calc_shipping", :type => "submit", :value => "1"} Update Totals

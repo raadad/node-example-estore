@@ -1,0 +1,33 @@
+/ Post Type - Product
+%article.product
+  .innercontainer
+    .post-header
+      .entry-thumb
+        %img{:src => lorem.image("270x218")}
+      %a.entry-link.add-to-cart(href="#") Add to cart
+      %a.entry-link.more-link(href="#") See this item
+
+    %header.entry-header
+      %h2
+        %a(href="#") More bigger than usual cart in the world of 3D movies
+
+    .entry-content
+      %ul.post-meta
+        %li<
+          Price: 
+          %del $90
+          %span.price-tag $45
+        %li<
+          Categories: 
+          %a(href="#") Family,
+          %a(href="#") Woman
+
+    %footer.entry-footer
+      %time.datetime(datetime="2012-04-01") About 8 hours ago
+      .star-rating
+        %span.star.lit
+        %span.star.lit
+        %span.star
+        %span.star
+        %span.star
+/ /End of Post Type - Product

@@ -1,0 +1,66 @@
+.innercontainer
+
+  %header.entry-header
+    %h2 The Creative Act: George Benetton Lois Men's T-shirt (limited)
+
+  .product-meta
+    %span.sku 
+      SKU:
+      %span 1987
+    %span.product-cat
+      More From:
+      %a(href="#") creative,
+      %a(href="#") t-shirt
+
+
+  .summary
+
+    %p.facebook-share-like
+      %a(class="addthis_button_facebook_like" fb:like:layout="standard" fb:like:send="true")
+
+    .entry-content
+      :markdown
+        Tall, upright and monstrous, the Royal Desktop Model 10 was a dystopian beast of industrial era engineering
+        when it first hit the market 1914. Built of cast iron and equipped with glass keys, it was also the first
+        typewriter to sell for a $100 price tag. Almost century later, this model remains a fully functioning.
+
+        Royal Desktop Model 10 was a dystopian beast of industrial era engineering when it first hit the market 1914. 
+        Built of cast iron and equipped with glass keys, it was also the first typewriter to sell for a $100 price tag.
+
+      %p.stock In stock - 500 available (backorders allowed)
+
+    .product-price
+      %table.variations
+        %tbody
+
+          %tr
+            %td
+              %label T-shirt size
+            %td
+              %select(name="attribute_size")
+                %option Choose an option
+                %option Medium
+                %option Small
+                %option Large
+
+          %tr
+            %td
+              %label Color
+            %td
+              %select(name="attribute_color")
+                %option Choose an option
+                %option Red
+                %option Green
+                %option Blue
+
+      .single-variation-wrap
+        .single-variation
+          .price $271.5
+        .variations-button
+          .quantity
+            %input#minus1.minus{:type => "button", :value => "-"}
+            %input.input-text.qty.text{"data-max" => "0", "data-min" => "", :maxlength => "12", :size => "4", :title => "Qty", :value => 2}
+            %input#add1.plus{:type => "button", :value => "+"}/
+          %button.btn(type="submit") Add to cart
+
+

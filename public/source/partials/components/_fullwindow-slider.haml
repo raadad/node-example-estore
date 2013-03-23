@@ -1,0 +1,25 @@
+/ Slider container
+%section#slider-container.fullwindow
+  %h2.greeting Hey there! I'm John Doe and I sell some stuffs for a living.
+
+  / Start Slider Section
+  .slider-wrapper
+    %article
+      %img{:src => lorem.image("770x375"), :width => "770", :height => "375"}
+      .slide-block
+        %h3.slide-title This is a very very very long title, don't worry the title will cut beautifully with CSS
+        %a.slide-link(href="#") Continue Reading
+
+    - 5.times do
+      %article
+        %img{:src => lorem.image("770x375"), :width => "770", :height => "375"}
+        .slide-block
+          %h3.slide-title Dress beautifully with our discount stock, shop till you drop!
+          %a.slide-link(href="#") Continue Reading
+  / /End Slider Section
+
+  %a.btn.btn-cta
+    %h4.cta-heading Want to know much more?
+    %p.cta-line Find interesting in here then let's get in touch
+  %h3.greeting Sure you can custom this text with your own and make it fits within your site content
+/ /End of Slider Container

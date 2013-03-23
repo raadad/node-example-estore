@@ -1,0 +1,12 @@
+%aside.widget.widget_login_form
+  .widget-title
+    %h5 Have an Account? Let's Go!
+  .widget-inner-container
+
+  - form_tag( '', :class => 'login-form' ) do
+    - field_set_tag do
+      = text_field_tag :username, :placeholder => 'Type Username'
+      = password_field_tag :password, :placeholder => 'Please Provide Your Password'
+    %p
+      %a.forgot.btn.btn-plain(href="#") Password?
+      %button.btn.submit.lightblue Login

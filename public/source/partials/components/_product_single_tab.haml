@@ -1,0 +1,44 @@
+/ Star Product Tabs
+%section.product-tab
+
+  %aside.widget.widget_tabs
+    .widget-inner-container
+
+      %ul
+        %li<
+          %a(href="#tab-description") Description
+        %li<
+          %a(href="#tab-attributes") Additionals Information
+        %li<
+          %a(href="#tab-reviews" ) Reviews
+
+
+      #tab-description
+        %h2 Product Description
+        :markdown
+          Tall, upright and monstrous, the Royal Desktop Model 10 was a dystopian beast of industrial era engineering
+          when it first hit the market 1914. Built of cast iron and equipped with glass keys, it was also the first
+          typewriter to sell for a $100 price tag. Almost century later, this model remains a fully functioning.
+
+          Royal Desktop Model 10 was a dystopian beast of industrial era engineering when it first hit the market 1914. 
+          Built of cast iron and equipped with glass keys, it was also the first typewriter to sell for a $100 price tag.
+
+      #tab-attributes
+        %h2 Additionals Information
+        %table.shop-attributes
+          %tbody
+            %tr
+              %th Size
+              %td Medium, Small, X-Large
+            %tr.alt
+              %th Colour
+              %td Green
+
+      #tab-reviews
+        %h2 Reviews
+        :markdown
+          There are no reviews yet, would you like to [submit yours](#)
+          
+
+
+/ /End Product Tabs

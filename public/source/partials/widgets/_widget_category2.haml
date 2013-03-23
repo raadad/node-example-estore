@@ -1,0 +1,8 @@
+%aside.widget.widget_category
+  .widget-title
+    %h5 Browse Categories
+  .widget-inner-container
+    %ul
+      - ['Jeans (12)', 'Accessories (348)', 'Necklaces (53)', 'Dress (17)', 'T-Shirt (180)', 'Jewelries (89)', 'Handy Bag (37)', 'Birthday Cake (814)'].each do |item|
+        %li
+          %a(href="#") #{item}

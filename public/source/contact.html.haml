@@ -1,0 +1,93 @@
+---
+title: 'Contact Us'
+body_class: 'contact page'
+---
+
+/ Start Main Container Section
+%section#primary(role="primary")
+  .container
+
+    .section-title
+      %h3
+        %span Contact Us
+
+    / Main Content
+    #content(role="main")
+
+      %article.post.format-contact
+        
+        .innercontainer
+          .post-header
+            #maps
+            %script(type="text/javascript")
+              :plain
+                window.onload = function(){
+                  jQuery("#maps").gmap3({
+                    action: 'addMarker',
+                    address: 'monas',
+                    map: {
+                      center: true,
+                      zoom: 16
+                    }
+                  });
+                };
+          
+          %header.entry-header
+            %h2 Our location, wanna say hello in person? We leave you with contact form too, don't hesitate
+
+          %aside.entry-meta
+            %ul
+              %li.entry-meta-symbol
+              %li.entry-meta-maps<
+                %a(href="#") See this map
+
+          .entry-content
+            :markdown
+              Some description text will be good being placed in here. Magnificent Geometric Snow Art by Artist Simon
+              Becj must really love the cold weather! Using snow as high textures on his artwork. Tall, upright and
+              monstrous, the Royal Desktop Model 10 was a dystopiaan beast of industrial era engineering when it first
+              hit the market 1914. Built of cast iron and equipped with glass keys, it was also the first typewrite to sell
+              for a $100 price tag. Almost a century later, this model remain a fullu functioning.
+
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. [Nulla consequat massa quis enim](#). Donec pede justo, fringilla vel, aliquet. 
+
+            %p
+              %a(href="#" class="btn lightblue btn-medium") 
+                %strong DOWNLOAD OUR PRODUCTS CATALOG
+              %a(href="#" class="btn fancypink btn-medium") 
+                %strong BUTTONS ARE FROM BOOTSTRAP
+          
+            :markdown
+              Some description text will be good being placed in here. Magnificent Geometric Snow Art by Artist Simon
+              Becj must really love the cold weather! Using snow as [high textures](#) on his artwork. Tall, upright and
+              monstrous, the Royal Desktop Model 10 was a dystopiaan beast of industrial era engineering when it first
+              hit the market 1914. Built of cast iron and equipped with glass keys, it was also the first typewrite to sell
+              for a $100 price tag. Almost a century later, this model remain a fullu functioning.
+              
+        #comments
+          = partial "partials/components/post/contact_form"    
+
+    / /End of Main Content
+
+
+    / Start Sidebar
+    #secondary.widget-area(role="complementary")
+      %aside.widget.widget_text
+        .widget-title
+          %h5 About Commerce From Nesia
+        .widget-inner-container
+          :markdown
+            Extend more desciription in here. It's an aside for your content on contact page. It could be your
+            location, stuffs or something like that. Maybe you could improve this text more valuable as long as your 
+            customer need some information about you.
+
+            Here go the dummy text. Commerce is a WordPress theme focused to collecting, curating, blogging, grouping your 
+            portfolio content and selling stuffs. Created by Indonesian people who love to create and doing amazing things. 
+            Hopefully you'll like this!
+
+            Copyrights 2012 All Rights. Reserved 
+            Powered by WordPress, naturally. A Nesia Production.
+
+    / /End Sidebar
+
+/ /End Main Container Section

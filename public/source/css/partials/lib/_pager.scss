@@ -1,0 +1,30 @@
+// PAGER
+// -----
+
+.pager {
+  @include clearfix();
+  margin-left: 0;
+  margin-bottom: $baseLineHeight;
+  list-style: none;
+  text-align: center;
+  li {
+    display: inline;
+  }
+  a {
+    @include border-radius(15px);
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+	&:hover {
+    	text-decoration: none;
+    	background-color: #f5f5f5;
+  	}
+  }
+  .next a {
+    @include float(right);
+  }
+  .previous a {
+	@include float(left);
+  }
+}

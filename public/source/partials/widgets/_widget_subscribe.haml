@@ -1,0 +1,26 @@
+%aside.widget.widget_subscribe
+  .widget-title
+    %h5 Subscribe And Join The Crowd
+  .widget-inner-container
+    %p
+      Subscribe our newsletter for better information |
+      and update about our stuffs, collections, blog for |
+      some news or just notice from us. Thank you!
+
+    - form_tag( '', :class => 'subscribe-form' ) do
+      = text_field_tag :email, :placeholder => 'Email Address', :class => 'input-text'
+      = submit_tag :subscribe, :value => 'Subscribe', :class => 'input-button'
+
+    %ul
+      %li
+        %a(href="#") Follow us on Twitter
+      %li
+        %a(href="#") Like our Facebook page!
+      %li
+        %a(href="#") Join our circle on Google plus
+      %li
+        %a(href="#") Streamline on Flickr
+      %li
+        %a(href="#") Subscribe newsletter (mailchimp)
+      %li
+        %a(href="#") Subscribe mail newsletter

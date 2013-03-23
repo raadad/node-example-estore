@@ -1,0 +1,46 @@
+extends layout
+block bricks
+  section#primary(role='primary')
+    .container
+      #content(role='main')
+        article.post.format-contact
+          .innercontainer
+            #comments
+              #respond
+                h2#reply-title
+                  | We would love to hear from you
+                  small
+                    a#cancel-comment-reply-link(href='#', rel='nofollow', style='display: none;') Cancel reply
+                div#contactH
+                  div#contactF
+                    form#contact_form
+                      p.comment-form-author
+                        label(for='author') Name
+                        span.helper-text (ex: John Thor)
+                        span.required *
+                        span.input-wrapper
+                          input#name(aria-required='true', name='author', size='30', type='text', value='')
+                      p.comment-form-email
+                        label(for='email') Email
+                        span.required *
+                        span.input-wrapper
+                          input#email(aria-required='true', name='email', size='30', type='text', value='')
+                      p.comment-form-url
+                        label(for='url') Contact Number
+                        span.helper-text (Optional)
+                        span.input-wrapper
+                          input#contact(name='url', size='30', type='text', value='')
+                      p.comment-form-subject
+                        label Subject
+                        span.required *
+                        span.input-wrapper
+                          input#subject(name='url', size='30', type='text', value='', style='width:98%;')
+                      p.comment-form-comment
+                        label(for='comment') Comment
+                        span.input-wrapper
+                          textarea#message(aria-required='true', cols='45', name='comment', rows='8')
+                      p.form-submit
+                        span.input-wrapper
+                          input#submit(name='submit', type='submit', value='Send Enquiry')
+                        input#comment_post_ID(name='comment_post_ID', type='hidden', value='1')
+                        input#comment_parent(name='comment_parent', type='hidden', value='0')                

@@ -1,0 +1,64 @@
+#respond
+  %h2#reply-title
+    Leave a comment here
+    %small
+      %a#cancel-comment-reply-link(href="#" rel="nofollow" style="display:none") Cancel reply
+
+  %form#commentform
+
+    %p.comment-form-author
+      %label{:for => "author"} Name
+      %span.helper-text (ex: John Thor)
+      %span.required *
+      %span.input-wrapper
+        %input#author{"aria-required" => "true", :name => "author", :size => "30", :type => "text", :value => ""}/
+
+    %p.comment-form-email
+      %label{:for => "email"} Email
+      %span.helper-text (Not published)
+      %span.required *
+      %span.input-wrapper
+        %input#email{"aria-required" => "true", :name => "email", :size => "30", :type => "text", :value => ""}/
+
+    %p.comment-form-url
+      %label{:for => "url"} Website
+      %span.helper-text (Optional)
+      %span.input-wrapper
+        %input#url{:name => "url", :size => "30", :type => "text", :value => ""}/
+
+    %p.comment-form-subject
+      %label Subject      
+      %span.required *
+
+      %label.radio
+        %input{:name => "subject", :type => "radio", :value => "option1"}/
+        Unsatisfied with our services
+        %span.helper-text (ex: why you're unhappy)
+      %label.radio
+        %input{:name => "subject", :type => "radio", :value => "option2"}/
+        Payment system went wrong with credit card
+        %span.helper-text (ex: billed you too much)
+      %label.radio
+        %input{:name => "subject", :type => "radio", :value => "option3"}/
+        Just another subject for example        
+      %label.radio
+        %input{:name => "subject", :type => "radio", :value => "option4"}/
+        General question
+        %span.helper-text (ex: what)
+
+    %p.comment-form-comment
+      %label{:for => "comment"} Comment
+      %span.input-wrapper
+        %textarea#comment{"aria-required" => "true", :cols => "45", :name => "comment", :rows => "8"}
+
+    %p.subscribe-to-comments
+      %input#subscribe{:name => "subscribe", :style => "width: auto;", :type => "checkbox", :value => "subscribe"}
+        %label{:for => "subscribe"} Notify me of followup comments via e-mail
+
+    %p.form-submit
+      %span.input-wrapper
+        %input#submit{:name => "submit", :type => "submit", :value => "Post Comment"}/
+      %input#comment_post_ID{:name => "comment_post_ID", :type => "hidden", :value => "1"}
+        %input#comment_parent{:name => "comment_parent", :type => "hidden", :value => "0"}
+
+/ #respond

@@ -1,0 +1,30 @@
+---
+title: 'Blog Post'
+body_class: 'blog'
+---
+
+/ Start Main Container Section
+%section#primary(role="primary")
+  .container
+
+    .section-title
+      %h3
+        %span Blog
+
+    / Main Content
+    #content(role="main")
+
+      =partial "partials/components/blog_post_list"
+
+      / Pagination
+      .pagination-container
+        / Infinite Pagination
+        .infinite-pagination 
+          %a(href="#") Load More Content
+      
+    / /End of Main Content
+
+
+    = partial "partials/sidebar"
+
+/ /End Main Container Section

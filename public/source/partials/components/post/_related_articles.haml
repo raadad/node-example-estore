@@ -1,0 +1,19 @@
+#related-articles
+
+  %ul
+    %li<
+      %a(href="#tabpop" title="Top Rated Product") Popular
+    %li<
+      %a(href="#tabcategories" title="Popular Product") Related By Categories
+    %li<
+      %a(href="#tabtags" title="Latest Product") Related By Tags
+
+  #tabpop
+    = partial "partials/components/post/related_slider"
+
+  #tabcategories
+    = partial "partials/components/post/related_slider"
+
+  #tabtags
+    = partial "partials/components/post/related_slider"
+/ #related-articles

@@ -1,0 +1,50 @@
+extends layout     
+block bricks
+    section#primary(role='primary')
+    .container
+          #content(role='main')
+            article.post
+              //include bar     
+              .section-banner(style="background-color:white;")
+                .post-header
+              .section-ordering
+                .feature-section.widget-area
+                    aside.widget
+                      .widget-inner-container
+                        .post-header
+                          .entry-thumb
+                            img(src='/images/t1.png')                        
+                        h4 Welcome
+                        p
+                          | This is an example store to showcase some cool technologies and show how they can all work together to create some cool tech
+                        a.more-link(href='/products') Checkout our products
+                    aside.widget
+                      .widget-inner-container
+                        .post-header
+                          .entry-thumb
+                            img(src='/images/t2.png')            
+                        h4 Built from scratch
+                        p
+                          | You wont find Magento or Os Commerce running in the back end here, this whole store is written completly from scratch and some awesome libraries
+                        a.more-link(href='#') 
+                    aside.widget
+                      .widget-inner-container
+                        .post-header
+                          .entry-thumb
+                            img(src='/images/t3.png')            
+                        h4 Cutting edge technologies
+                        p
+                          | Socket.io , Express.js, Node.js, Jade, Backbone.js, Coffee-Script all work together to make this site.            
+
+              .section-title
+                        h3
+                          span Featured Products                        
+                  block bxx
+                    if _.size(displayItems) < 1
+                      label There were no results, please try again
+              .post-list.post-grid 
+                include productcards
+          include sidebar
+          
+      script(type='text/javascript')              
+        $("body").attr("class","product-page");  

@@ -1,0 +1,20 @@
+each name in displayItems
+  article.product
+    .innercontainer
+      .post-header
+        .entry-thumb
+          img(src='http://dummyimage.com/270x180/000000/f0f0f0.jpg&text=#{name.name}')
+        a.entry-link.add-to-cart(style="cursor:pointer;",onclick="comm('add','#{name.sku}')") Add to cart
+        a.entry-link.more-link(href='/products/#{name.sku}') See this item
+      header.entry-header
+        h2
+          a(href='') #{name.name}
+      .entry-content
+        ul.post-meta
+          li
+            | Price:
+            span.price-tag $#{name.price}
+          li
+            | Categories:
+            each k in name.category
+              a(href='/category/#{k}')  #{k}	

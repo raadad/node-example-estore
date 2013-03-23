@@ -1,0 +1,52 @@
+#secondary.widget-area(role='complementary')
+            aside.widget.widget_login_form
+              .widget-title
+                h5 Have an Account? Let's Go!
+              .widget-inner-container
+              .login-form(method='post', action='', accept-charset='UTF-8')
+                fieldset
+                  input(placeholder='Type Username', name='username', type='text')
+                  input(placeholder='Please Provide Your Password', name='password', type='password')
+                p
+                  a.forgot.btn.btn-plain(onclick="alert('Please call the Isupply store to have your password reset');") Password?
+                  button.btn.submit.lightblue(onclick="comm('login');")  Login                
+                a#logz(style="color:red;margin-top:10px")
+            aside.widget.widget_shopping_cart
+              .widget-title
+                h5 Shopping Cart
+              #quickCart.widget-inner-container
+                p.total
+                  strong Subtotal:
+                  span.amount $---
+                p.buttons
+                  a.cart(href='#')
+                    span View Cart →
+                  a.checkout(href='/cart')
+                    span Checkout →                                     
+            aside.widget.widget_csategory
+              .widget-title
+                h5 Browse Categories
+              .widget-inner-container
+                ul
+                  each rax,flax in ax.categories
+                    li
+                      div
+                        if _.size(ax.flatCategories[flax]) > 0
+                          a.label.label-info(style="moz-border-radius:0px;webkit-border-radius:0px;border-radius:0px;background-color:#5A9EFF;color:#FFF;margin-left:0px;",href='/category/#{flax.trim().replace(/\ /g,"-")}') #{flax}
+                          a.label #{_.size(ax.flatCategories[flax])}
+                        else
+                          i.label.label-info(style="moz-border-radius:0px;webkit-border-radius:0px;border-radius:0px;background-color:#5A9EFF;color:#FFF;margin-left:0px;") #{flax}
+                      each p,t in rax
+                        div
+                          if _.size(ax.flatCategories[t]) > 0
+                            a.label.label-info(style="moz-border-radius:0px;webkit-border-radius:0px;border-radius:0px;color:#FFF;margin-left:20px;",href='/category/#{flax.trim().replace(/\ /g,"-")}/#{t.trim().replace(/\ /g,"-")}') #{t}
+                              a.label #{_.size(ax.flatCategories[t])}
+                          else
+                             i.label.label-info(style="moz-border-radius:0px;webkit-border-radius:0px;border-radius:0px;color:#FFF;margin-left:20px;") #{t}                                 
+                        each x,y in p
+                          div
+                            if _.size(ax.flatCategories[y]) > 0
+                              a.label.label-info(style="moz-border-radius:0px;webkit-border-radius:0px;border-radius:0px;background-color:#5A9EFF;color:#FFF;margin-left:40px;",href='/category/#{flax.trim().replace(/\ /g,"-")}/#{t.trim().replace(/\ /g,"-")}/#{y.trim().replace(/\ /g,"-")') #{y}                        
+                                a.label #{_.size(ax.flatCategories[y])}
+                            else
+                               i.label.label-info(style="moz-border-radius:0px;webkit-border-radius:0px;border-radius:0px;background-color:#5A9EFF;color:#FFF;margin-left:40px;") #{y}

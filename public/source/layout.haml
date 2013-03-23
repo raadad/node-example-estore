@@ -1,0 +1,262 @@
+!!! 5
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]> <html class="no-js lt-ie9 ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+%head
+  %meta(charset="utf-8")
+  %meta(name="author" content="Nesia")
+  %meta(name="description" content="Nesia Bootstrap")
+  %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  %title #{data.page.title}
+  = yield_content :head
+
+  / le Styles
+  / JQuery UI stylesheet
+  = stylesheet_link_tag "jquery-ui.css"
+  / bootstrap.css as dependencies stylesheet
+  = stylesheet_link_tag "bootstrap.css", "plugins"
+  / print stylesheet from printstylesheet.com, it's standard
+  = stylesheet_link_tag "print"
+  / Custom Font from Google Webfonts, Oswald
+  %link(href="http://fonts.googleapis.com/css?family=Oswald:700,400" rel="stylesheet")
+  / custom style from user, not from us as developer
+  %link(rel="stylesheet" medial="all" href="style.css")
+  = yield_content :assets
+
+
+  = javascript_include_tag "libs/jquery-1.7.1.min"
+  / Le HTML5 shim, for IE6-8 support of HTML5 elements
+  / [if lt IE 9]
+    = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
+    = javascript_include_tag "ie"
+
+  / Google Map script
+  %script(type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false")
+
+  %link(rel="shortcut icon" href="images/favicon.ico")
+  %link(rel="apple-touch-icon" href="images/apple-touch-icon.png")
+  %link(rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72-precomposed.png")
+  %link(rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114-precomposed.png")
+
+%body(class="#{data.page.body_class}")
+
+  / Start Top Navigation Container
+  %header.navbar(role="navigation")
+    .navbar-inner
+      .container
+
+        .logo-container
+          / Button toggle for mobile menu
+          %a.btn.btn-navbar(data-toggle="collapse" data-target=".nav-collapse")
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+
+          / Logo
+          #logo
+            %a.brand(href="index.html")
+              %img(src="images/logo.png" alt="Enabl")
+        
+        / Collapsible block for mobile menu
+        %nav.nav-collapse
+
+          / Search Form
+          %form.navbar-search.pull-left
+            %input.search-query(type="text" placeholder="Enter keyword and press enter")
+
+          / Top Navigation
+          %ul.nav
+            %li.dropdown 
+              %a.dropdown-toggle(href="#") 
+                Homepage
+                %i.arrow
+              %ul.dropdown-menu
+                %li<
+                  %a(href="index.html") Homepage i
+                %li<
+                  %a(href="homepage-ii.html") Homepage ii
+                %li<
+                  %a(href="homepage-iii.html") Homepage iii
+                %li<
+                  %a(href="homepage-iv.html") Homepage iv
+                %li<
+                  %a(href="homepage-v.html") Homepage v
+                %li.dropdown<
+                  %a(href="#")<
+                    Menu
+                    %i.arrow
+                  %ul.dropdown-menu
+                    %li<
+                      %a(href="#") Menu
+                    %li<
+                      %a(href="#") Menu
+
+            %li.dropdown 
+              %a.dropdown-toggle(href="#") 
+                Product
+                %i.arrow
+              %ul.dropdown-menu
+                %li<
+                  %a(href="product-i.html") Product i
+                %li<
+                  %a(href="product-ii.html") Product ii
+                %li<
+                  %a(href="product-detail.html") Product Detail
+
+            %li<
+              %a(href="cart.html") Cart
+
+            %li.dropdown
+              %a.dropdown-toggle(href="#") 
+                Blog
+                %i.arrow
+              %ul.dropdown-menu
+                %li<
+                  %a(href="blog.html") Blog
+                %li<
+                  %a(href="blog-detail.html") Blog Detail
+                %li<
+                  %a(href="docs/index.html") Documentation
+
+            %li<
+              %a(href="contact.html") Contact
+            %li<
+              %a(href="fullwidth.html") Fullwidth
+
+          / Social Stats
+          %ul.social-stats.pull-right
+            %li.icon-facebook-sign<
+              %a(href="#") 500
+            %li.icon-twitter-sign<
+              %a(href="#") 2430
+
+
+  / /End Top Navigation Container
+
+  / Breadcrumb Navbar
+  %nav.subnav.subnav-fixed(role="breadcrumb")
+    .container
+
+      / Breadcrumbs
+      .breadcrumb
+        %span.info You are in here:
+        %a(href="#") Homepage
+        %span.separator /
+        %a(href="#") Product
+        %span.separator /
+        %a(href="#") Electronic
+        %span.separator /
+        %span.active More bigger than usual cart on the world of 3D movies
+
+      / Cart Button
+      .btn-group.cart-dropdown
+        %button.btn.btn-cart.dropdown-toggle(data-toggle="dropdown") Your Cart
+        %ul.cart-product-list.dropdown-menu
+          %li.cart-product
+            %a(href="#") 
+              %img(src="images/dummy/cart-product1.jpg")
+              Pallagrino casual polo shirt for man and women
+            %span.quantity
+              1 × 
+              %span.amount $160
+          %li
+            %a(href="#") 
+              %img(src="images/dummy/cart-product2.jpg")
+              Diamond oval ring for wedding
+            %span.quantity
+              3 × 
+              %span.amount $160
+
+          %li.total
+            %div.total-block
+              %strong Subtotal:
+              %span.amount $340
+          %li.buttons
+            %a.cart(href="#") 
+              %span View Cart &rarr;
+            %a.checkout(href="#") 
+              %span Checkout &rarr;
+
+
+
+
+  / /End Breadcrumb Navbar
+
+
+  = yield
+
+
+  / Start Footer Container
+  %footer#footer
+    .container
+
+      / Footer Widget
+      #footer-widget.widget-area
+
+        = load_widget('widget_text')
+        = load_widget('widget_post_list')
+        = load_widget('widget_twitter')
+        = load_widget('widget_flickr')
+    
+      / /End Footer Widget Area
+
+      / Footer Navigation
+      %hr.separator
+      %nav.footer-navigation(role="navigation footer secondary")
+        %ul
+          %li<
+            %a(href="#") Home
+          %li<
+            %a(href="#") Portfolio
+          %li<
+            %a(href="#") Products
+          %li<
+            %a(href="#") Archive
+          %li<
+            %a(href="#") Blog
+          %li<
+            %a(href="#") Contact
+
+      / Footer Logo
+      .footer-logo
+        %a(href="#")
+          %img(src="images/logo.png" alt="Enabl")
+
+  / /End Footer Container
+
+  / Le Javascript
+  / Placed at the end of the document so the pages load faster 
+  = javascript_include_tag "libs/jquery-ui-1.8.18.custom.min.js"
+  = javascript_include_tag "bootstrap", "plugins", "script"
+  = yield_content :scripts
+
+  / Javascript var inside the document for used
+  %script(type="text/javascript")
+    var addthis_config = {"data_track_clickback":true};
+    var flickrid = "52617155@N08";
+    var tweet = "html5";
+
+  / for twitter widget hovercard
+  %script(type="text/javascript" src="http://platform.twitter.com/anywhere.js?id=ZSO1guB57M6u0lm4cwqA&v=1")
+
+  / for addthis
+  %script(type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=fgaeg")
+  / /end of scripting for add this widget to load
+
+  / for google analytics
+  :javascript
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-9262526-27']);
+    _gaq.push(['_setDomainName', 'nesia.me']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_trackPageLoadTime']);
+    (function() {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</html>

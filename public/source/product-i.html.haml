@@ -1,0 +1,55 @@
+---
+title: 'Product i'
+body_class: 'product-page'
+---
+
+/ Start Main Container Section
+%section#primary(role="primary")
+  .container
+
+    .section-title
+      %h3
+        %span Products
+
+    / Main Content
+    #content(role="main")
+
+      / Section Banner
+      .section-banner
+        %img{:src => lorem.image("870x290") }
+        .entry-header
+          %h2 Whitespace
+      / /End Section banner
+
+      .section-ordering
+        %h4.title Whitespace
+        %form.ordering-wrapper
+          %label Sort by
+          %select(name="category")
+            %option All Categories
+            %option Dress
+            %option Jumpsuits
+            %option Shirt
+
+          %select(name="product")
+            %option All Products
+            %option Alphabetically
+            %option Most Recent
+            %option Price
+
+
+      = partial "partials/components/product_list_dynamic"
+
+      / Pagination
+      .pagination-container
+
+        / Infinite Pagination
+        .infinite-pagination 
+          %a(href="#") Load More Content
+          
+    / /End of Main Content
+
+
+    = partial "partials/sidebar_shop"
+
+/ /End Main Container Section

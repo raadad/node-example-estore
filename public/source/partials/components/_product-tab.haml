@@ -1,0 +1,26 @@
+/ Star Product Tabs
+%section.product-tab
+
+  %aside.widget.widget_tabs
+    .widget-inner-container
+
+      %ul
+        %li<
+          %a(href="#top-product" title="Top Rated Product") Top Rated
+        %li<
+          %a(href="#popular-product" title="Popular Product") Popular
+        %li<
+          %a(href="#latest-product" title="Latest Product") Latest
+
+      #top-product
+        = partial "partials/components/product_tab_slider"
+
+      #popular-product
+        = partial "partials/components/product_tab_slider"
+
+      #latest-product
+        = partial "partials/components/product_tab_slider"
+          
+
+
+/ /End Product Tabs

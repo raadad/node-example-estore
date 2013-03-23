@@ -1,0 +1,55 @@
+%aside.widget.widget_tabs
+  .widget-inner-container
+    
+    %ul
+      %li.latest<
+        %a(href="#tablatest" title="Latest Articles") Latest Articles      
+      %li.reads<
+        %a(href="#tabreads" title="Most Reads") Most Reads
+      %li.popular<
+        %a(href="#tabpopular" title="Most Popular") Most Popular
+      %li.comments<
+        %a(href="#tabcomments" title="Most Commented")Most Commented
+      %li.discuss<
+        %a(href="#tabdiscuss" title="Most Discussion")Most Discussion
+      %li.likes<
+        %a(href="#tablikes" title="Most Likes")Most Likes
+
+    #tablatest
+      .tabs-title
+        %h5 Latest
+      .widget-inner-content
+        = load_widget('post_list_type')
+
+    #tabreads
+      .tabs-title
+        %h5 Most Reads by Visitors
+      .widget-inner-content
+        = load_widget('post_list_type')
+
+    #tabpopular
+      .tabs-title
+        %h5 Popular Articles
+      .widget-inner-content
+        = load_widget('post_list_type')
+
+    #tabcomments
+      .tabs-title
+        %h5 Latest Comments
+      .widget-inner-content
+        = load_widget('post_list_type')
+
+    #tabdiscuss
+      .tabs-title
+        %h5 Articles With Active Discussion to Watch
+      .widget-inner-content
+        = load_widget('post_list_type')
+
+    #tablikes
+      .tabs-title
+        %h5 Most Likes News and Articles
+      .widget-inner-content
+        = load_widget('post_list_type')
+
+
+    

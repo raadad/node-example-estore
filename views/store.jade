@@ -1,0 +1,19 @@
+extends layout     
+block bricks
+    section#primary(role='primary')
+    .container
+          #content(role='main')
+            include bar
+            .post-list.post-grid
+              block bxx
+                if _.size(displayItems) < 1
+                  label There were no results, please try again
+
+              label #{displayItems.length}
+              include productcards
+          include sidebar
+          
+                     // a(href='/category/#{rax.trim().replace(/\ /g,"-")}') #{rax}
+      script(type='text/javascript')              
+        $("body").attr("class","product-page");  
+

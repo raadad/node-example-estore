@@ -1,0 +1,110 @@
+extends layout
+block bricks
+    section#primary(role='primary')
+      .container
+        .section-title
+          h3
+            span Shopping Cart
+        //
+           Main Content 
+        #content(role='main')
+          //
+             Start Shopping Cart Table 
+          form(action='', method='post')
+            table.cart-table(cellspacing='0')
+              thead
+                tr
+                  th
+                  th Product Name
+                  th Unit Price
+                  th Quantity
+                  th Price
+              tbody#hCart
+        
+          //
+             /End Shopping Cart Table 
+          .cart-collaterals
+            .cart-totals(style="float:left;")
+
+                    
+              h2 Cart Totals
+              table(cellpadding='0', cellspacing='0')
+                tbody#hTotal             
+            div.shipping-calculator(action='', method='post')
+              h2
+                a.checkout-button(href='/products')
+                  | Continue Shopping            
+              h2 -Or-
+
+              h2
+                a.checkout-button.shipping-calculator-button(href='#')
+                  | Proceed To Checkout
+                  span ↓
+              section.shipping-calculator-form
+
+                label Your Details
+                p.form-row.form-row-first
+                  input#calc_shipping_state.input-text(id="first", name='calc_shipping_state', placeholder='First name', type='text')
+                p.form-row.form-row-last
+                  input#calc_shipping_state.input-text(id="last", name='calc_shipping_state', placeholder='Last name', type='text')
+                p.form-row.form-row-wide
+                  input#calc_shipping_state.input-text(id="contact",name='calc_shipping_state', placeholder='Contact Number', type='text')                                 
+                label Your Business Details (optional)                  
+                p.form-row.form-row-first
+                  input#calc_shipping_state.input-text(id="bname",name='calc_shipping_state', placeholder='Business Name', type='text', value='')
+                p.form-row.form-row-last
+                  input#calc_shipping_state.input-text(id="abn",name='calc_shipping_state', placeholder='ABN', type='text', value='')                                      
+                label Postage Details
+                p.form-row.form-row-wide
+                  input#calc_shipping_state.input-text(id="addr1",name='calc_shipping_state', placeholder='Address Line 1', type='text')   
+                p.form-row.form-row-wide
+                  input#calc_shipping_state.input-text(id="addr2",name='calc_shipping_state', placeholder='Address Line 2', type='text')                                 
+                p.form-row.form-row-first
+                  input#calc_shipping_state.input-text(id="post",name='calc_shipping_state', placeholder='Postcode', type='text', value='')
+                p.form-row.form-row-last
+                  input#calc_shipping_state.input-text(id="state",name='calc_shipping_state', placeholder='State', type='text', value='')         
+                p.form-row.form-row-wide
+                  label Would you like us to post the items to you, or would you prefer to pick them up?
+                div.btn-group.form-row
+                  button.btn.btn-primary.dropdown-toggle(data-toggle="dropdown", style="width:220px;") 
+                    | Delivery Method 
+                    span.caret
+                  ul.dropdown-menu(style="background-color:white;")
+                    li
+                      a(onclick="$('#method').html('You are going to pick the item up from us');")
+                        |Pickup
+                    li
+                      a(onclick="$('#method').html('We are going to post the items out to you');")
+                        |Postage
+                p.form-row.form-row-wide
+                  label 
+                    strong Method: 
+                    span#method We are going to post the items out to you
+
+                p.form-row.form-row-wide
+                  label Select a payment option
+                div.btn-group.form-row
+                  button.btn.btn-primary.dropdown-toggle(data-toggle="dropdown", style="width:220px;") 
+                    | Payment Method  
+                    span.caret
+                  ul.dropdown-menu(style="background-color:white;")
+                    li
+                      a(onclick="check('paypal',false);")
+                        |Paypal                        
+                    li
+                      a(onclick="check('pickup',false);")
+                        |Payment On Pickup                      
+                div#restof
+                div#errorx.alert
+      div#myModal.fade.modal(tabindex="-1",role="dialog",aria-labelledby="myModalLabel",aria-hidden="true")
+        div.modal-header
+          button.close(ype="button", data-dismiss="modal",aria-hidden="true")
+          h3#myModalLabel Checkout
+        div.modal-body
+          div#finalCart
+          div#paypal
+          div#payment
+        div.modal-footer
+          button.btn(data-dismiss="modal" ,aria-hidden="true") Cancel
+          div#commox
+            button#commitx.btn.btn-primary(onclick="commit();",data-dismiss="modal" ,aria-hidden="true") Commit To Purchase

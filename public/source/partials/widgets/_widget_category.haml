@@ -1,0 +1,8 @@
+%aside.widget.widget_category
+  .widget-title
+    %h5 Just Select Your Type Below
+  .widget-inner-container
+    %ul
+      - ['Male', 'Female', 'Hover', 'Babies', 'Kids'].each do |item|
+        %li
+          %a(href="#") #{item}

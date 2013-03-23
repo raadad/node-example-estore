@@ -1,0 +1,308 @@
+// BUTTON STYLES
+// -------------
+
+
+// Base styles
+// --------------------------------------------------
+
+// Core
+.btn {
+	@include buttonBackground($white, darken($white, 11%));
+	@include border-radius(3px);
+	$shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+	@include box-shadow($shadow);
+	display: inline-block;
+	padding: 4px 10px 4px;
+	margin-bottom: 0; // For input.btn
+	font-size: $baseFontSize;
+	line-height: $baseLineHeight;
+	color: $grayDark;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(255,255,255,.75);
+	vertical-align: middle;
+	border: 1px solid #ccc;
+	border-bottom-color: #bbb;
+	cursor: pointer;
+
+	// Give IE7 some love
+	@include reset-filter();
+	@include ie7-restore-left-whitespace();
+	
+	// Hover state
+	&:hover {
+	  color: $grayDark;
+	  text-decoration: none;
+	  background-color: darken($white, 10%);
+	  background-position: 0 -15px;
+
+	  // transition is only when going to hover, otherwise the background
+	  // behind the gradient (there for IE<=9 fallback) gets mismatched
+	  @include transition(background-position .1s linear);
+	}
+	
+	// Focus state for keyboard and accessibility
+	&:focus {
+	  @include tab-focus();
+	}
+	
+	// Active state
+	&.active,
+	&:active {
+	  background-image: none;
+	  $shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+	  @include box-shadow($shadow);
+	  background-color: darken($white, 10%);
+	  background-color: darken($white, 15%) #{"\9"};
+	  outline: 0;
+	}
+	
+	// Disabled state
+	&.disabled,
+	&[disabled] {
+	  cursor: default;
+	  background-image: none;
+	  background-color: darken($white, 10%);
+	  @include opacity(65);
+	  @include box-shadow(none);
+	}
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+// Large
+.btn-large {
+  padding: 9px 14px;
+  font-size: $baseFontSize + 2px;
+  line-height: normal;
+  @include border-radius(4px);
+
+  & [class^="icon-"] {
+	  margin-top: 1px;
+  }
+}
+
+// Small
+.btn-small {
+  padding: 5px 9px;
+  font-size: $baseFontSize - 2px;
+  line-height: $baseLineHeight - 2px;
+
+  & [class^="icon-"] {
+	  margin-top: -1px;
+  }
+}
+
+// Mini
+.btn-mini {
+  padding: 2px 6px;
+  font-size: $baseFontSize - 2px;
+  line-height: $baseLineHeight - 4px;
+}
+
+// Medium
+.btn-medium {
+  padding: 11px 20px;
+  line-height: normal;
+  font-size: $baseFontSize - 2;
+  @include border-radius(4px);
+
+  & [class^="icon-"] {
+    margin-top: 1px;
+  }
+}
+
+// Btn uppercase
+.btn-uppercase {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+// Full Border radius
+.btn-full-radius {
+  @include border-radius(100px)
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+// Set text color
+// -------------------------
+.btn-primary,
+.btn-primary:hover,
+.btn-warning,
+.btn-warning:hover,
+.btn-danger,
+.btn-danger:hover,
+.btn-success,
+.btn-success:hover,
+.btn-info,
+.btn-info:hover,
+.btn-inverse,
+.btn-inverse:hover,
+.lightblue,
+.lightblue:hover,
+.lightgreen,
+.lightgreen:hover,
+.fancypink,
+.fancypink:hover,
+.btn-cta,
+.btn-cta:hover {
+  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  color: $white !important;
+}
+
+.btn-plain,
+.btn-plain:hover,
+.btn-cart,
+.btn-cart:hover {
+  color: #666
+}
+
+// Provide *some* extra contrast for those who can get it
+.btn-primary.active,
+.btn-warning.active,
+.btn-danger.active,
+.btn-success.active,
+.btn-info.active,
+.btn-dark.active {
+  color: rgba(255,255,255,.75);
+}
+
+// Remove inset box shadow on some button
+.lightblue, .btn-plain {
+  $shadow: none;
+  @include box-shadow($shadow)
+}
+
+// Set the backgrounds
+// -------------------------
+.btn-primary {
+  @include buttonBackground($primaryButtonBackground, adjust-hue($primaryButtonBackground, 20));
+}
+// Warning appears are orange
+.btn-warning {
+  @include buttonBackground(lighten($orange, 15%), $orange);
+}
+// Danger and error appear as red
+.btn-danger {
+  @include buttonBackground(#ee5f5b, #bd362f);
+}
+// Success appears as green
+.btn-success {
+  @include buttonBackground(#62c462, #51a351);
+}
+// Info appears as a neutral blue
+.btn-info {
+  @include buttonBackground(#5bc0de, #2f96b4);
+}
+// Inverse appears as dark gray
+.btn-inverse {
+  @include buttonBackground(#454545, #262626);
+}
+// Light blue
+.lightblue {
+  @include buttonBackground(#5a9eff, #4c8fea);
+  border: 1px solid #467cc6;
+}
+// Pink
+.fancypink {
+  @include buttonBackground(#ff5a72, #e84562);
+  border: 1px solid #c62745;
+}
+// btn-plain 
+.btn-plain {
+  @include buttonBackground(#ffffff, #f6f6f6);
+  border: 1px solid #ddd;
+}
+// Light Green
+.lightgreen {
+  @include buttonBackground(#65cd18, #4bad1a);
+  border-color: #49942d;
+}
+// Shopping cart button
+.btn-cart {
+  &:before {
+    font-size: 15px;
+    margin-right: 5px;
+    vertical-align: text-top;
+    @extend [class^="icon-"]:before;
+    @extend .icon-shopping-cart:before;
+  }
+  &.dropdown-toggle:after {
+    top: -2px;
+    margin-left: 10px;
+    position: relative;
+    vertical-align: middle;
+    @extend .caret;
+  }
+}
+// Pill Button
+.btn-pill {
+  padding: 2px 10px;
+  background: #e8e8e8;
+  background: rgba(0,0,0,.05);
+  font-size: $baseFontSize;
+  @extend .btn-full-radius;
+}
+// Call to Action Button
+.btn-cta {
+  $ctaEndColor: #2967ba;
+  $ctaBorderColor: #114c9c;
+  @include buttonBackground(#378bff, $ctaEndColor);
+  border: 1px solid $ctaBorderColor;
+  padding: 15px 55px;
+  position: relative;
+
+  .cta-heading {
+    @extend h4;
+    color: #fff;
+    font-size: 17px;
+    margin-bottom: 5px;
+  }
+  .cta-line {
+    margin: 0;
+    font-size: 12px;
+    color: rgba(255,255,255,.7);
+  }
+  &:after, &:before {
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 1px;
+    bottom: 1px;
+    position: absolute;
+    background: $ctaEndColor;
+    border-bottom: 1px solid $ctaBorderColor;
+  }
+  &:after {
+    bottom: 3px;
+  }
+}
+
+// Cross-browser Jank
+// --------------------------------------------------
+
+button.btn,
+input[type="submit"].btn {
+
+  // Firefox 3.6 only I believe
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  // IE7 has some default padding on button controls
+  *padding-top: 2px;
+  *padding-bottom: 2px;
+  &.large {
+    *padding-top: 7px;
+    *padding-bottom: 7px;
+  }
+  &.small {
+    *padding-top: 3px;
+    *padding-bottom: 3px;
+  }
+}

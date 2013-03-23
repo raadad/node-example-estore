@@ -1,0 +1,42 @@
+extends layout
+block bricks
+  section#primary(role='primary')
+    .container
+      #content(role='main')
+        article.product
+          .innercontainer
+            header.entry-header
+              h2 #{pr.name}
+            .product-meta
+              span.sku
+                | SKU:#{pr.sku}
+                span 
+              span.product-cat
+                | Catagories:
+                each k in pr.category
+                  a(href='/category/#{k}')  #{k} 
+            .summary
+              p.facebook-share-like
+                a.addthis_button_facebook_like(fb:like:layout='standard', fb:like:send='true')
+              .entry-content
+                p #{pr.product_description}
+                  
+                .single-variation-wrap
+                  .single-variation
+                    .price $#{pr.price} Each
+                  .variations-button
+                    .quantity
+                    button.btn(onclick="comm('add','#{pr.sku}');" ,type='submit') Add to cart
+      #secondary.widget-area(role='complementary')
+        aside.product-images
+          .post-header
+            .entry-images
+              img(height='300', src='http://dummyimage.com/270x180/000000/f0f0f0.jpg&text=#{pr.name}', width='370')
+
+
+        aside.widget.widget_shopping_cart
+          .widget-title
+            h5 Shopping Cart
+          #quickCart.widget-inner-container
+      script(type='text/javascript')              
+        $("body").attr("class","single single-product");        

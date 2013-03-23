@@ -1,0 +1,19 @@
+%aside.widget.widget_price_filter
+  .widget-title
+    %h5 Price Filter
+  .widget-inner-container
+    
+    %form
+      .price_slider_wrapper
+        .price_slider
+      .price_slider_amount
+        %input(type="text" id="min_price" name="min_price" value="" data-min="0" placeholder="Min price")
+        %input(type="text" id="max_price" name="max_price" value="" data-max="950" placeholder="Max price")
+        %button.button(type="submit")Filter
+
+        .price_label
+          Price:
+          %span.from
+          &mdash;
+          %span.to
+    

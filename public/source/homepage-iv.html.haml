@@ -1,0 +1,28 @@
+---
+title: 'Homepage Layout iv'
+body_class: 'home'
+---
+
+/ Start Main Container Section
+%section#primary(role="primary")
+  .container
+    #content(role="main")
+
+      / Start Product List Section
+      .section-title
+        %h3
+          %span Featured Products
+
+      = partial "partials/components/product_list_dynamic"
+      / /End Product List Section
+
+
+      / Pagination
+      .pagination-container
+
+        / Infinite Pagination
+        .infinite-pagination 
+          %a(href="#") Load More Content
+
+
+/ /End Main Container Section

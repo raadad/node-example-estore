@@ -1,0 +1,16 @@
+extends layout
+block bricks
+      .container
+        .section-title
+          h3
+            span Thanks for shopping with us
+        #content(role='main')
+            if(ax.obj.trans)
+                label 
+                    | Your reciept number is 
+                    strong #{ax.obj.trans} 
+                    |, We have sent you a copy of your purchases to your email
+                    If you need anything else , or have any questions \ issues, please dont hesitate to call or email us.
+            else
+                label
+                    | Your cart has been successfully reset, you now can make more purchases if you wish.

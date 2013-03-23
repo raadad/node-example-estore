@@ -1,0 +1,66 @@
+---
+title: 'Fullwidth Page'
+body_class: 'fullwidth page'
+---
+
+/ Start Main Container Section
+%section#primary(role="primary")
+  .container
+
+    .section-title
+      %h3
+        %span You're looking our page
+
+    / Main Content
+    #content(role="main")
+
+      %article.post
+        
+        .innercontainer
+          .post-header
+            %img{:src => lorem.image("1170x370")}
+
+          %aside.entry-meta
+            %ul
+              %li.entry-meta-symbol
+              %li.entry-meta-author<
+                By 
+                %a(href="#") Bima Arafah
+              %li.entry-meta-category<
+                Categories: 
+                %a(href="#") 1987
+              %li.entry-meta-tags<
+                Tags: 
+                %a(href="#") creative, 
+                %a(href="#") urban
+              %li.entry-meta-views 248 Views
+
+          %header.entry-header
+            %h2 It's just sample title of page, fullwidth format
+
+          .entry-content
+            :markdown
+              Some description text will be good being placed in here. Magnificent Geometric Snow Art by Artist Simon
+              Becj must really love the cold weather! Using snow as high textures on his artwork. Tall, upright and
+              monstrous, the Royal Desktop Model 10 was a dystopiaan beast of industrial era engineering when it first
+              hit the market 1914. Built of cast iron and equipped with glass keys, it was also the first typewrite to sell
+              for a $100 price tag. Almost a century later, this model remain a fullu functioning.
+
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. [Nulla consequat massa quis enim](#). Donec pede justo, fringilla vel, aliquet. 
+
+            %p
+              %a(href="#" class="btn lightblue btn-medium") 
+                %strong DOWNLOAD OUR PRODUCTS CATALOG
+              %a(href="#" class="btn fancypink btn-medium") 
+                %strong BUTTONS ARE FROM BOOTSTRAP
+          
+            :markdown
+              Some description text will be good being placed in here. Magnificent Geometric Snow Art by Artist Simon
+              Becj must really love the cold weather! Using snow as [high textures](#) on his artwork. Tall, upright and
+              monstrous, the Royal Desktop Model 10 was a dystopiaan beast of industrial era engineering when it first
+              hit the market 1914. Built of cast iron and equipped with glass keys, it was also the first typewrite to sell
+              for a $100 price tag. Almost a century later, this model remain a fullu functioning.
+              
+    / /End of Main Content
+
+/ /End Main Container Section

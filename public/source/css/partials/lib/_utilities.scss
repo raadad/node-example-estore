@@ -1,0 +1,58 @@
+// UTILITY CLASSES
+// ---------------
+
+// Quick floats
+.pull-right, .float-right, .fr { float: right; }
+.pull-left, .float-left, .fl { float: left }
+.pull-none, .float-none, .fn { float: none }
+
+// Toggling content
+.hide { display: none; }
+.show { display: block; }
+.hide-text {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+// Visibility
+.invisible { visibility: hidden; }
+
+/* For image replacement */
+.ir {
+  @extend .show;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+  br { display: none; } }
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden {
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+
+	&.focusable {
+		&:active,
+		&:focus {
+			margin: 0;
+			clip: auto;
+			height: auto;
+			overflow: visible;
+			position: static;
+			width: auto;
+		}
+	}
+}
+
+.clear {
+  clear: both;
+}

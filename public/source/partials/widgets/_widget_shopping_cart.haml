@@ -1,0 +1,41 @@
+%aside.widget.widget_shopping_cart
+  .widget-title
+    %h5 Shopping Cart
+  .widget-inner-container
+
+    %ul.cart-list.product-list
+      %li
+        %a(href="#") 
+          %img(src="images/dummy/cart-product1.jpg")
+          Pallagrino casual polo shirt for man and women
+        %dl.variation
+          %dt Color:
+          %dd Black
+          %dt Size:
+          %dd Small
+        %span.quantity
+          1 × 
+          %span.amount $160
+
+      %li
+        %a(href="#") 
+          %img(src="images/dummy/cart-product2.jpg")
+          Diamond oval ring for wedding
+        %dl.variation
+          %dt Color:
+          %dd Black
+          %dt Size:
+          %dd Small
+        %span.quantity
+          1 × 
+          %span.amount $160
+
+    %p.total
+      %strong Subtotal:
+      %span.amount $340
+
+    %p.buttons
+      %a.cart(href="#") 
+        %span View Cart &rarr;
+      %a.checkout(href="#") 
+        %span Checkout &rarr;

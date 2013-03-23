@@ -1,0 +1,36 @@
+---
+title: 'Product Detail'
+body_class: 'single single-product'
+---
+
+/ Start Main Container Section
+%section#primary(role="primary")
+  .container
+
+    .section-title
+      %h3
+        %span Products
+
+    / Main Content
+    #content(role="main")
+
+      / Product Detail
+      %article.product
+        
+        = partial "partials/components/product_single"
+
+        = partial "partials/components/product_single_tab"
+
+        = partial "partials/components/related_products"
+
+        %p.aligncenter 
+          %a.scrolltop(href="#") Bring me to the top of page
+
+      / /End of Product Detail
+
+    / /End of Main Content
+
+
+    = partial "partials/sidebar_product"
+
+/ /End Main Container Section

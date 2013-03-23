@@ -1,0 +1,22 @@
+---
+title: 'Homepage'
+body_class: 'home'
+---
+
+= partial "partials/components/3dslider"
+
+/ Start Main Container Section
+%section#primary(role="primary")
+  .container
+    #content(role="main")
+
+      = partial "partials/components/feature-section"
+
+      = partial "partials/components/product-list"
+      %hr.separator
+
+      = partial "partials/components/featured-category"
+
+
+/ /End Main Container Section
+

@@ -1,0 +1,561 @@
+/*!
+ * Starting WordPress Class by default
+ *
+ *!
+ * Page Listings
+ * Provided by the wp_list_pages() 
+ * and wp_page_menu() template tags
+ */
+.pagenav {}               	/* outermost list item */
+.page_item {}             	/* any page item */
+.page-item-89 {}        	/* specific page id .page-item-{id} {} */
+.current_page_item {}   	/* current page */
+.current_page_parent {}   	/* parent of current page */
+.current_page_ancestor {} 	/* any ancestor of current page */
+
+.pagenav {
+	ul { 
+		ul { }
+	}
+	.current_page_item {
+		ul { 
+			ul { }
+		}
+	}
+	.current_page_ancestor {
+		ul { 
+			ul { }
+		}
+		.current_page_item {
+			ul { 
+				ul { }
+			}
+		}
+		.current_page_ancestor {
+			ul {
+				ul { }
+			}
+			.current_page_item {
+				ul { 
+					ul { }
+				}
+			}
+			.current_page_ancestor {
+				ul { 
+					ul { }
+				}
+			}
+		}
+	}
+}
+
+
+
+/*!
+ * Custom nav menu style generated
+ */
+#header {
+	
+	// container class
+	.main-menu {
+		
+		// container class first unordered list
+		ul {
+			// unordered list within an unordered list
+			ul {} 
+		} 
+		// each navigation item
+		li { 
+			// each navigation item anchor
+			a { }
+			// unordered list if there is drop down items
+			ul { }
+			// each drop down navigation item
+			li { 
+				// each drap down navigation item anchor
+				a { }
+			}
+		}
+	}
+}
+
+// Class for Current Page
+.current_page_item  {} 
+// Class for Current Category
+.current-cat {} 
+// Class for any other current Menu Item
+.current-menu-item {} 
+// Class for a Category
+.menu-item-type-taxonomy  {} 
+// Class for Pages
+.menu-item-type-post_type {}
+// Class for any custom item that you added 
+.menu-item-type-custom {} 
+// Class for the Home Link
+.menu-item-home {} 
+	
+	
+	
+
+/*
+ * Body class for WordPress 
+ * Provided from body_class() function
+ */
+.rtl {}
+.home {}
+.blog {}
+.archive {}
+.date {}
+.search {}
+.paged {}
+.attachment {}
+.error404 {}
+// /* .single postid-(id) {} */
+.single {
+	.postid-89 {}
+}
+// /* .attachmentid-(id) {} */
+.attachmentid-89 {}
+// /* .attachment-(mime-type) {} */
+.attachment-jpeg {}
+.author {}
+// /* .author-(user_nicename) {} */
+.author-fgaeg {}
+.category {}
+// /* .category-(slug) {} */
+.category-fgaeg-page {}
+.tag {}
+// /* .tag-(slug) {} */
+.tag-fgaeg-page {}
+.page-parent {}
+// /* .page-child parent-pageid-(id) {} */
+.page-child {
+	.parent-pageid-89 {}
+}
+// /* .page-template page-template-(template-file-name) {} */
+.page-template {
+	.page-template-portfolio-two-column {}
+}
+.search-results {}
+.search-no-results {}
+.logged-in {}
+// /* 
+// .paged-(page-number)
+// .single-paged-(page-number) {}
+// .page-paged-(page-number) {}
+// .category-paged-(page-number) {}
+// .tag-paged-(page-number) {}
+// .date-paged-(page-number) {}
+// .author-paged-(page-number) {}
+// .search-paged-(page-number) {}
+// */
+.paged-2 {}
+.single-paged-2 {}
+.page-paged-2 {}
+.category-paged-2 {}
+.tag-paged-2 {}
+.date-paged-2 {}
+.author-paged-2 {}
+.search-paged-2 {}
+// /* .tax-(taxonomy-name) */
+.tax-css-style {}
+// /* .term-(term-name) */
+.term-wordpress-tags {}
+.admin-bar {}
+
+	
+	
+
+/*
+ * Post class on WordPress page
+ * Provided by post_class() function
+ */
+.post-id {}
+.post {}
+.page {}
+.attachment {}
+.sticky {}
+.hentry {}
+.category-misc {}
+.category-example {}
+.tag-news {}
+.tag-wordpress {}
+.tag-markup {}
+
+
+
+
+
+/*
+ * Post Type Format Styles
+ */
+.format-image {}
+.format-gallery {}
+.format-chat {}
+.format-link {}
+.format-quote {}
+.format-status {}
+.format-video {}
+
+
+/* 
+ * Miscellaneous Styles
+ * If you really need, or leave it blank
+ */
+ li {
+	/* category links */
+	&.categories {}
+	&.cat-item {}
+	// /* li.cat-item-{id} */
+	 &.cat-item-89 {}
+	 &.current-cat {}
+	 &.current-cat-parent {}
+}  
+ul.children {}
+
+/* blogroll links */
+.linkcat {}
+.blogroll {}
+
+/* read-more links */
+.more-link {}
+	
+	
+	
+	
+/* 
+ * WordPress formatted content
+ * Provided from WYSIWYG Editor Styles
+ * Just change and make it suitable with your document
+ */
+.entry-content img {
+	margin: 0 0 1.5em 0;
+}
+.alignleft,
+img.alignleft {
+	@include float(left);
+	margin-right: 1.5em;
+}
+.alignright, 
+img.alignright {
+	@include float(right);
+	margin-left: 1.5em;
+}
+.aligncenter, 
+img.aligncenter {
+	@extend .show;
+  text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	clear: both;
+}
+.alignnone, 
+img.alignnone {
+	// not sure about this one
+}
+.wp-caption {
+	margin-bottom: 1.5em;
+	text-align: center;
+	padding-top: 5px;
+	img {
+		border: 0 none;
+		padding: 0;
+		margin: 0;
+	}
+	p.wp-caption-text {
+		line-height: 1.5;
+		font-size: 10px;
+		margin: 0;
+	}
+	
+}
+.wp-smiley {
+	margin: 0 !important;
+	max-height: 1em;
+}
+blockquote {
+	&.left {
+		@include float(left);
+		margin-right: 1.5em;
+		text-align: right;
+		margin-left: 0;
+		width: 33%;
+	}
+	&.right {
+		@include float(right);
+		margin-left: 1.5em;
+		text-align: left;
+		margin-right: 0;
+		width: 33%;
+	}
+}
+.gallery {
+	dl { 
+		margin: 0;
+		a { }
+		img { }
+	}
+	dt { }
+	dd { }
+}
+.gallery-caption { margin: -1.5em 0 0 0; }
+
+.size-full {}
+.size-large {}
+.size-medium {}
+.size-thumbnail {}
+	
+
+
+
+/* 
+ * All Default WordPress Widgets
+ * Please put all widgets in lines below
+ */
+.widget {}
+
+/* links widget */
+.widget_links {
+	ul {
+		li { 
+			a { }
+		}
+	}
+}
+
+/* meta widget */
+.widget_meta {
+	ul {
+		li {
+			a { }
+		}
+	}
+}
+
+/* pages widget */
+.widget_pages {
+	ul {
+		li {
+			a { }
+		}
+	}
+}
+
+/* recent-posts widget */
+.widget_recent_entries {
+	ul {
+		li {
+			a { }
+		}
+	}
+}
+
+/* archives widget */
+.widget_archive {
+	ul {
+		li {
+			a { }
+		}
+	}
+	select { }
+	option { }
+}
+
+/* tag-cloud widget */
+.widget_links {
+	li {
+		&:after { }
+		&:before { }
+	}
+}
+.widget_tag_cloud {
+	a {
+		&:after { }
+		&:before { }
+	}
+}
+
+/* calendar widget */
+.widget_calendar {}
+#calendar_wrap {
+	th { }
+	td { }
+}
+#wp-calendar {
+	tr {
+		td {}
+	}
+	caption { }
+	a { }
+	#today { }
+	#prev { 
+		a { }
+	}
+	#next {
+		a { }
+	}
+}
+
+/* category widget */
+.widget_categories {
+	ul {
+		li { }
+		ul {
+			&.children { }
+		}
+	}
+	a { }
+	select {
+		&#cat { }
+		&.postform { }
+	}
+	option { }
+	.level-0 { }
+	.level-1 { }
+	.level-2 { }
+	.level-3 { }
+}
+
+/* recent-comments widget */
+.recentcomments { }
+#recentcomments {
+	li {
+		a { }
+	}
+}
+.widget_recent_comments { }
+
+/* search widget */
+#searchform {  }
+.widget_search { }
+.screen-reader-text { }
+
+/* text widget */
+.textwidget {
+	p { }
+}
+.widget_text { }
+	
+	
+/* 
+ * Formatting for WordPress Comment section
+ * Comments Comment List Styles 
+ */
+.commentlist {
+	.reply {
+		a { }
+	}
+	.alt { }
+	.odd { }
+	.even { }
+	.thread-alt { }
+	.thread-odd { }
+	.thread-even { }
+	li {
+		ul {
+			&.children {
+				.alt { }
+				.odd { }
+				.even { }
+			}
+		}
+	}
+	.vcard {
+		cite.fn {
+			a.url { }
+		}
+		span.says { }
+		img {
+			&.photo { }
+			&.avatar { }
+		}
+	}
+	.comment-meta {
+		a { }
+	}
+	.commentmetadata {
+		a { }
+	}
+	.parent { }
+	.comment { }
+	.children { }
+	.pingback { }
+	.bypostauthor { }
+	.comment-author { }
+	.comment-author-admin { }
+	
+	li {
+		p { }
+		ul {
+			&.children {
+				li {
+					&.alt { }
+					&.byuser { }
+					&.comment { }
+					
+					// /* .commentlist li ul.children li.depth-{id} {} */
+					&.depth-89 { }
+					&.bypostauthor { }
+					&.comment-author-admin { }
+				}
+			}
+		}
+	}
+}
+
+#cancel-comment-reply {
+	a { }
+}
+	
+	
+/* 
+ * WordPress Comment form
+ * Define each dependencies in here
+ * Or just change the structure with what you want
+ */
+
+/* Wrapper div for the entire comment form. */
+div#respond { }
+/* Reply title. */
+h3#reply-title {
+	/* Cancel comment link. */
+	small { }
+}
+/* The comment form. */
+form#commentform { }
+/* Comment author field. */
+p {
+	&.comment-form-author {
+		label { }
+		input#author { }
+	}/* Comment email field. */
+	&.comment-form-email {
+		label { }
+		input#email { }
+	}
+	/* Comment URL field. */
+	&.comment-form-url {
+		label { }
+		input#url { }
+	}
+	/* Comment form text. */
+	&.comment-form-comment {
+		label { }
+		textarea#comment { }
+	}
+	/* Must log in paragraph. */
+	&.must-log-in { }
+	/* Logged in paragraph. */
+	&.logged-in-as { }
+	/* Comment notes paragraph. */
+	&.comment-notes { }
+	/* Allowed tags paragraph. */
+	&.form-allowed-tags {
+		code { }
+	}	/* Paragraph that wraps the submit button and hidden comment ID fields. */
+	&.form-submit { }
+}
+/* Required (*) text. */
+span.required { }
+/* Submit button. */
+input#submit { }

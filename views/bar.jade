@@ -1,0 +1,12 @@
+.section-ordering
+  h4.title Products
+  div.ordering-wrapper
+    select#selx(onchange="window.open(this.options[this.selectedIndex].value,'_top')" ,style="width:300px",name='category')
+     each val,key in ax.categories
+      option(value="/category/#{key}") #{key}
+      each p,t in val
+        option(value="/category/#{t}") --#{t}
+        each x,y in p                                
+          option(value="/category/#{y}") ----#{y}
+    input#searchX(onkeypress="handleKeyPress(event,$('#searchX').val())",onsubmit="return false;",placeholder='Search For Products', type='text')
+    input#searchY.btn(style="margin-bottom:10px;",type="button",onclick="search($('#searchX').val())",value="search")  

@@ -1,0 +1,35 @@
+---
+title: 'Blog Post'
+body_class: 'blog single'
+---
+
+/ Start Main Container Section
+%section#primary(role="primary")
+  .container
+
+    .section-title
+      %h3
+        %span Blog Post
+
+    / Main Content
+    #content(role="main")
+
+      / Blog Post Format - Gallery
+      %article.post.format-gallery
+        
+        = partial "partials/components/post_single"
+
+        = partial "partials/components/post/related_articles"
+
+        #comments
+          = partial "partials/components/post/comment_list"
+          = partial "partials/components/post/comment_form"
+
+      / /End of Blog Post Format - Gallery
+
+    / /End of Main Content
+
+
+    = partial "partials/sidebar"
+
+/ /End Main Container Section

@@ -1,0 +1,207 @@
+/*
+ * Skin for jPlayer Plugin (jQuery JavaScript Library)
+ * http://www.jplayer.org
+ *
+ * Skin Name: Grey Flag
+ *
+ * Copyright (c) 2011 Happyworm Ltd
+ * Dual licensed under the MIT and GPL licenses.
+ *  - http://www.opensource.org/licenses/mit-license.php
+ *  - http://www.gnu.org/copyleft/gpl.html
+ *
+ * Author: Silvia Benvenuti
+ * Skin Version: 1.0 (jPlayer 2.1.0)
+ * Date: 1st September 2011
+ */
+
+$backgroundColor:       #383838;
+$borderColor:           #141414;
+
+div.jp-audio,
+div.jp-video {
+  color: #fff;
+  position:relative;
+  background-color: $backgroundColor;
+}
+div.jp-audio {
+  width:86%;
+  padding:7.5%
+}
+div.jp-interface {
+  width:100%;
+  position: relative;
+  background-color: $backgroundColor
+}
+div.jp-audio .jp-interface {
+  padding-top:40px;
+}
+
+
+.jp-interface {
+
+  // JPlayer Controls
+  .jp-controls, .jp-toggles {
+    margin: 0;
+    list-style: none;
+    @include clearfix;
+
+    // All Button Controls
+    a {
+      font-size: 20px;
+      &:before {
+        @extend [class^="icon-"]:before;
+      }
+    }
+
+    // VOLUME
+    // --------------
+    .jp-mute,
+    .jp-unmute,
+    .jp-volume-max {
+      width: 20px;
+      height: 20px;
+      overflow: hidden;
+      text-indent: -11px;
+      position: absolute;
+      color: #888;
+      &:before { text-indent: 16px; }
+    }
+    .jp-mute,
+    .jp-unmute {
+      top:-6px;
+      left: 0;
+    }
+    .jp-volume-max {
+      top: -6px;
+      right: 0;
+    }
+
+    // Play Pause Stop
+    // ------------------
+    li {
+      width: 50%;
+      @include float(left);
+    }
+    .jp-play,
+    .jp-pause,
+    .jp-stop {
+      color: #111;
+      line-height: 34px;
+      display: block;
+      overflow: hidden;
+      text-align: center;
+      white-space: nowrap;
+      text-indent: 100%;
+      border: 1px solid $borderColor;
+      text-shadow: 0 1px rgba(255,255,255,.2);
+      @include gradient-vertical(#555, #333);
+      &:before {
+        text-indent: -100%;
+      }
+      &:hover {
+        @include gradient-vertical(#333, #555);
+      }
+    }
+    .jp-play, .jp-pause { border-right: none }
+    .jp-stop { border-left: 1px solid rgba(0,0,0,.5); }
+
+    // Button Icon
+    // --------------
+    .jp-play:before       { @extend .icon-play:before; }
+    .jp-stop:before       { @extend .icon-stop:before; }
+    .jp-pause:before      { @extend .icon-pause:before; }
+    .jp-mute:before       { @extend .icon-volume-down:before; }
+    .jp-unmute:before     { @extend .icon-volume-off:before; }
+    .jp-volume-max:before { @extend .icon-volume-up:before; }
+    .jp-repeat:before     { @extend .icon-repeat:before; }
+    .jp-repeat-off:before { @extend .icon-repeat:before; }
+
+  }
+
+
+  // JPlayer Volume Bar
+  // -------------------
+  .jp-volume-bar {
+    top: 20px;
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    padding: 2px 0 1px;
+    background: #141414;
+
+    .jp-volume-bar-value {
+      height: 3px;
+      background: #7a7a7a;
+      @include box-shadow(0 0 0 1px rgba(255,255,255,.2) inset);
+    }
+  }
+
+  // Progress Bar
+  // ----------------
+  .jp-progress {
+    width: 100%;
+    height: 13px;
+    overflow: hidden;
+    background: #4d4d4d;
+    padding: 0 0 2px 0;
+    margin-bottom: 7px;
+    position: relative;
+    .jp-seek-bar {
+      height: 100%;
+      cursor: pointer;
+      overflow: hidden;
+      background-color: #161616;
+    }
+    .jp-play-bar {
+      height: 100%;
+      @include gradient-vertical(#848484, #4a4a4a)
+    }
+  }
+
+  .jp-current-time, .jp-duration { 
+    color: #888;
+    font-size: 12px;
+    font-weight: bold
+  }
+  .jp-current-time {
+    @include float(left);
+  }
+  .jp-duration {
+    @include float(right);
+  }
+
+  .jp-toggles {    
+    width: 25px;
+    margin: 0 auto;
+    list-style: none;
+    overflow: hidden;
+    text-align: center;
+    li { 
+      width: 100%;
+    }
+    a { 
+      color: #888;
+      height: 25px;
+      overflow: hidden;
+      text-indent: 35px;
+      white-space: nowrap;
+      &:before { position: relative; left: -30px; }
+    }
+    .jp-repeat-off {
+      background: #eee;
+      background: rgba(0,0,0,.3);
+      @include box-shadow(0 0 0 1px rgba(255,255,255,.2) inset);
+    }
+  }
+
+}
+// Jplayer title
+// -----------------
+.jp-title {
+  margin: 10px 0;
+  text-align: center;
+  font-weight: bold;
+  ul { list-style:none; margin:0; }
+}

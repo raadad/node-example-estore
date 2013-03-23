@@ -1,0 +1,51 @@
+/ Start Sidebar
+#secondary.widget-area(role="complementary")
+  
+
+  %aside.product-images
+    .post-header
+      .entry-images
+        %img{ :src => lorem.image('370x300', :text => 'Slide 1'), :width => '370', :height => '300' }
+        %img{ :src => lorem.image('370x300', :text => 'Slide 2'), :width => '370', :height => '300' }
+        %img{ :src => lorem.image('370x300', :text => 'Slide 3'), :width => '370', :height => '300' }
+        %img{ :src => lorem.image('370x300', :text => 'Slide 4'), :width => '370', :height => '300' }
+        %img{ :src => lorem.image('370x300', :text => 'Slide 5'), :width => '370', :height => '300' }
+        
+
+    .entry-content
+      .thumbnails
+        %a(href="#" rel="thumbnails")
+          %img{ :src => lorem.image('60'), :width => '60', :height => '60' }
+        %a(href="#" rel="thumbnails")
+          %img{ :src => lorem.image('60'), :width => '60', :height => '60' }
+        %a(href="#" rel="thumbnails")
+          %img{ :src => lorem.image('60'), :width => '60', :height => '60' }
+        %a(href="#" rel="thumbnails")
+          %img{ :src => lorem.image('60'), :width => '60', :height => '60' }
+        %a(href="#" rel="thumbnails")
+          %img{ :src => lorem.image('60'), :width => '60', :height => '60' }     
+
+    .entry-footer
+      %span.counter
+        Image 
+        %span.current 1 
+        of 
+        %span.total 
+
+      %nav
+        %a.prev(href="#") Previous
+        \ /
+        %a.next(href="#") Next
+
+  / /End Product Images
+    
+  %aside.addthis_toolbox.addthis_default_style
+    %a.addthis_button_tweet
+    %a.addthis_button_google_plusone(g:plusone:size="medium")
+    %a.addthis_counter.addthis_pill_style
+
+  = load_widget('widget_recently_viewed');
+  = load_widget('widget_shopping_cart');
+  = load_widget('widget_products_review');
+
+/ /End of Sidebar

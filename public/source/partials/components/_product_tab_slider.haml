@@ -1,0 +1,25 @@
+.product-slider
+  
+  - slideitems = Array.new
+  - slideitems[0] = {:title => 'iPhone speaker dock with charger and speaker', :price => '$120.75', :rating => 3}
+  - slideitems[1] = {:title => 'Wol chair set', :price => 'From: <del>$78</del> $35.25', :rating => 1}
+  - slideitems[2] = {:title => 'WordPress t-shirt for your lovely kids', :price => '$18', :rating => 3}
+  - slideitems[3] = {:title => 'Digital weight calculator', :price => '$964', :rating => 5}
+  - slideitems[4] = {:title => 'Crayon multicolor', :price => 'From: <del>$13</del> $5.27', :rating => 1}
+  - slideitems[5] = {:title => 'Elegant underwear for woman', :price => '$180', :rating => 5}
+  - slideitems[6] = {:title => 'WordPress t-shirt for your lovely kids', :price => '$18', :rating => 3}
+  - slideitems[7] = {:title => 'iPhone speaker dock with charger and speaker', :price => '$120.75', :rating => 3}
+  - slideitems[8] = {:title => 'Crayon multicolor', :price => 'From: <del>$13</del> $5.27', :rating => 1}
+
+  - slideitems.each do |item|
+    %article
+      %img{:src => lorem.image("105")}
+      .star-rating
+        - item[:rating].times do
+          %span.star.lit
+        - (5 - item[:rating]).times do
+          %span.star
+
+      %h4.entry-title
+        %a(href="#")= item[:title]
+      %p.price-tag= item[:price]

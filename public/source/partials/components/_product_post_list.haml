@@ -1,0 +1,328 @@
+.post-list.post-grid
+  
+  / Post Format - Audio
+  %article.post.format-audio
+    .innercontainer
+      .post-header
+        .audio-player-container(data-title="Nyan Cat Song" data-source="music/nyan.mp3")
+
+      %header.entry-header
+        %h2
+          %a(href="#") sample audio post, it has to be responsive!
+
+      .entry-content
+        %p
+          Great song from Simon Beck, it's called Snow Art. Enjoy folks!
+
+        %ul.post-meta
+          %li<
+            Categories: 
+            %a(href="#") Sample,
+            %a(href="#") Audio
+
+      %footer.entry-footer
+        %time.datetime(datetime="2012-04-01") About 8 hours ago
+        .post-comment
+          %span.like-number 12
+          %span.comment-number 6
+  / /End of Post Format - Audio
+
+
+  / Post Type - Product
+  %article.product.sale
+    .innercontainer
+      .post-header
+        .entry-thumb
+          %img{:src => lorem.image("270x218")}
+        %a.entry-link.add-to-cart(href="#") Add to cart
+        %a.entry-link.more-link(href="#") See this item
+
+      %header.entry-header
+        %h2
+          %a(href="#") More bigger than usual cart in the world of 3D movies
+
+      .entry-content
+        %ul.post-meta
+          %li<
+            Price: 
+            %del $90
+            %span.price-tag $45
+          %li<
+            Categories: 
+            %a(href="#") Family,
+            %a(href="#") Woman
+
+      %footer.entry-footer
+        %time.datetime(datetime="2012-04-01") About 8 hours ago
+        .star-rating
+          %span.star.lit
+          %span.star.lit
+          %span.star
+          %span.star
+          %span.star
+  / /End of Post Type - Product
+  
+
+  / Post Format - Gallery
+  %article.post.format-gallery
+    .innercontainer
+      .post-header
+        .entry-thumb
+          %img{:src => lorem.image("270x244"), :width => "270", :height => "244"}
+          %img{:src => lorem.image("270x244"), :width => "270", :height => "244"}
+          %img{:src => lorem.image("270x244"), :width => "270", :height => "244"}
+
+      %header.entry-header
+        %h2
+          %a(href="#") Showcase or image gallery from blog post
+
+      .entry-content
+        %p
+          Some description text will be good being |
+          placed in here. Magnificent Geometric Snow Art |
+          by Simon Beck - Artist Simon Beck must really |
+          love the cold weather! Using snow as high |
+          textures on his artwork.
+
+        %ul.post-meta
+          %li<
+            Categories: 
+            %a(href="#") Sample,
+            %a(href="#") Picture
+
+      %footer.entry-footer
+        %time.datetime(datetime="2012-04-01") About 8 hours ago
+        .post-comment
+          %span.like-number 12
+          %span.comment-number 6
+  / /End of Post Format - Gallery
+  = partial "partials/components/product_item"
+
+  / Post Format - Video
+  %article.post.format-video
+    .innercontainer
+      .post-header
+        .entry-thumb
+          %a(href="#")
+            %img{:src => lorem.image("270x200")}
+
+      %header.entry-header
+        %h2
+          %a(href="#") Sample video post format
+
+      .entry-content
+        %p
+          Some description text will be good being |
+          placed in here. Magnificent Geometric Snow Art |
+          by Simon Beck - Artist Simon Beck must really |
+          love the cold weather! Using snow as high |
+          textures on his artwork.
+
+        %ul.post-meta
+          %li<
+            Categories: 
+            %a(href="#") Sample,
+            %a(href="#") Video
+
+      %footer.entry-footer
+        %time.datetime(datetime="2012-04-01") About 8 hours ago
+        .post-comment
+          %span.like-number 12
+          %span.comment-number 6
+  / /End of Post Format - Video
+
+
+  / Post Format - Quote
+  %article.post.format-quote
+    .innercontainer
+      .post-header
+        %blockquote<
+          Sample quote from blog post that shown up on homepage. |
+          Read more this detail post then you can see that there's no |
+          different about it, just semantically. Carat diamond oval |
+          ring for special bride on your wedding ceremony!
+
+      .entry-content
+        %p
+          Some description text will be good being |
+          placed in here. Magnificent Geometric Snow Art |
+          by Simon Beck - Artist Simon Beck must really |
+          love the cold weather! Using snow as high |
+          textures on his artwork.
+
+        %ul.post-meta
+          %li<
+            Categories: 
+            %a(href="#") Wisdom,
+            %a(href="#") Quote
+
+      %footer.entry-footer
+        %time.datetime(datetime="2012-04-01") About 8 hours ago
+        .post-comment
+          %span.like-number 12
+          %span.comment-number 6
+  / /End of Post Format - Quote
+  = partial "partials/components/product_item"
+  = partial "partials/components/product_item"
+
+  / Post Format - Image
+  %article.post.format-image
+    .innercontainer
+      .post-header
+        .entry-thumb
+          %img{:src => lorem.image("270x338")}
+
+      %header.entry-header
+        %h2
+          %a(href="#") Sample picture life is a beautiful ride from blog post
+
+      .entry-content
+        %p
+          Some description text will be good being |
+          placed in here. Magnificent Geometric Snow Art |
+          by Simon Beck - Artist Simon Beck must really |
+          love the cold weather! Using snow as high |
+          textures on his artwork.
+
+        %ul.post-meta
+          %li<
+            Categories: 
+            %a(href="#") Sample,
+            %a(href="#") Picture
+
+      %footer.entry-footer
+        %time.datetime(datetime="2012-04-01") About 8 hours ago
+        .post-comment
+          %span.like-number 12
+          %span.comment-number 6
+  / /End of Post Format - Image
+  = partial "partials/components/product_item"
+
+  / Post Format - Link
+  %article.post.format-link
+    .innercontainer
+      .post-header
+        %blockquote<
+          %a(href="#")
+            Thew Newspaper Times, oldest and most completed portal |
+            news in the world
+
+      .entry-content
+        %p
+          Some description text will be good being |
+          placed in here. Magnificent Geometric Snow Art |
+          by Simon Beck - Artist Simon Beck must really |
+          love the cold weather! Using snow as high |
+          textures on his artwork.
+
+        %ul.post-meta
+          %li<
+            Categories: 
+            %a(href="#") Sample,
+            %a(href="#") Link
+
+      %footer.entry-footer
+        %time.datetime(datetime="2012-04-01") About 8 hours ago
+        .post-comment
+          %span.like-number 12
+          %span.comment-number 6
+  / /End of Post Format - Link
+
+
+  / Post Format - Note
+  %article.post.format-note
+    .innercontainer
+      %header.entry-header
+        %h2
+          %a(href="#") Sample note post from blog, useful for post announcement or notice
+
+      .entry-content
+        %p<
+          Some description text will be good being |
+          placed in here. Magnificent Geometric Snow Art |
+          by Simon Beck - Artist Simon Beck must really |
+          love the cold weather! Using snow as high |
+          textures on his artwork.
+        %p<
+          Yep this text could contain your note, it can be announcement or just notice visitors
+  / /End of Post Format - Note
+
+
+  / Post Format - Aside
+  %article.post.format-aside
+    .innercontainer
+      %header.entry-header
+
+      .entry-content
+        %p<
+          It's an aside post format. You can insert your snippet |
+          text within this type, simple huh? It does look good for |
+          information or quick tip for your visitors. Let's rock!
+  / /End of Post Format - Aside
+  = partial "partials/components/product_item"
+  = partial "partials/components/product_item"
+
+
+  / Post Format - Standard without thumbnail
+  %article.post.format-standard
+    .innercontainer
+      %header.entry-header
+        %h2
+          %a(href="#") Blog post with standard type format without thumbnail
+
+      .entry-content
+        %p<
+          This blog post has not thumbnail. So the format of standard blog |
+          post will be like this, no image thumbnail, just the post title |
+          an it's excerpt content. It looks good for blogging, for sure...
+
+        %ul.post-meta
+          %li<
+            Categories: 
+            %a(href="#") Sample,
+            %a(href="#") Standard
+      
+      %footer.entry-footer
+        %time.datetime(datetime="2012-04-01") About 8 hours ago
+        .post-comment
+          %span.like-number 12
+          %span.comment-number 6
+  / /End of Post Format - Standard without thumbnail
+
+
+  / Post Format - Standard with thumbnail
+  %article.post.format-standard
+    .innercontainer
+      .post-header
+        .entry-thumb
+          %img{:src => lorem.image("270x157")}
+
+      %header.entry-header
+        %h2
+          %a(href="#") Blog post with standard type format but with thumbnail
+
+      .entry-content
+        %p<
+          This blog post has not thumbnail. So the format of standard blog |
+          post will be like this, no image thumbnail, just the post title |
+          an it's excerpt content. It looks good for blogging, for sure...
+
+        %ul.post-meta
+          %li<
+            Categories: 
+            %a(href="#") Sample,
+            %a(href="#") Standard
+      
+      %footer.entry-footer
+        %time.datetime(datetime="2012-04-01") About 8 hours ago
+        .post-comment
+          %span.like-number 12
+          %span.comment-number 6
+  / /End of Post Format - Standard with thumbnail
+  = partial "partials/components/product_item"
+
+
+
+
+
+

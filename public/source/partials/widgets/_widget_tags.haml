@@ -1,0 +1,9 @@
+%aside.widget.widget_tags
+  .widget-title
+    %h5 Product Tags
+  .widget-inner-container
+    - ['sequential', 'motion', 'scarf', 'glamour', 'daylight', 'creative',
+      'motif', 'badge', 'locked', 'public', 'sector', 'strike', 'nobeyama',
+      'atlasv', 'street art', 'chunky', 'movies', 'farg'].each do |item|
+      %a(href="#")= item
+    

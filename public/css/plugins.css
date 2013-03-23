@@ -1,0 +1,434 @@
+/** 
+ * Place all third party CSS here
+
+[class^="icon-"]:before, .jp-interface .jp-controls a:before, .jp-interface .jp-toggles a:before, .dk_toggle:after,
+[class*=" icon-"]:before {
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+}
+
+.icon-play:before, .jp-interface .jp-controls .jp-play:before, .jp-interface .jp-toggles .jp-play:before {
+  content: "\f04b";
+}
+
+.icon-stop:before, .jp-interface .jp-controls .jp-stop:before, .jp-interface .jp-toggles .jp-stop:before {
+  content: "\f04d";
+}
+
+.icon-pause:before, .jp-interface .jp-controls .jp-pause:before, .jp-interface .jp-toggles .jp-pause:before {
+  content: "\f04c";
+}
+
+.icon-volume-off:before, .jp-interface .jp-controls .jp-unmute:before, .jp-interface .jp-toggles .jp-unmute:before {
+  content: "\f026";
+}
+
+.icon-volume-down:before, .jp-interface .jp-controls .jp-mute:before, .jp-interface .jp-toggles .jp-mute:before {
+  content: "\f027";
+}
+
+.icon-volume-up:before, .jp-interface .jp-controls .jp-volume-max:before, .jp-interface .jp-toggles .jp-volume-max:before {
+  content: "\f028";
+}
+
+.icon-repeat:before, .jp-interface .jp-controls .jp-repeat:before, .jp-interface .jp-toggles .jp-repeat:before, .jp-interface .jp-controls .jp-repeat-off:before, .jp-interface .jp-toggles .jp-repeat-off:before {
+  content: "\f01e";
+}
+
+.icon-chevron-down:before, .dk_toggle:after {
+  content: "\f078";
+}
+
+/*
+ * Skin for jPlayer Plugin (jQuery JavaScript Library)
+ * http://www.jplayer.org
+ *
+ * Skin Name: Grey Flag
+ *
+ * Copyright (c) 2011 Happyworm Ltd
+ * Dual licensed under the MIT and GPL licenses.
+ *  - http://www.opensource.org/licenses/mit-license.php
+ *  - http://www.gnu.org/copyleft/gpl.html
+ *
+ * Author: Silvia Benvenuti
+ * Skin Version: 1.0 (jPlayer 2.1.0)
+ * Date: 1st September 2011
+ */
+div.jp-audio,
+div.jp-video {
+  color: #fff;
+  position: relative;
+  background-color: #383838;
+}
+
+div.jp-audio {
+  width: 86%;
+  padding: 7.5%;
+}
+
+div.jp-interface {
+  width: 100%;
+  position: relative;
+  background-color: #383838;
+}
+
+div.jp-audio .jp-interface {
+  padding-top: 40px;
+}
+
+.jp-interface .jp-controls, .jp-interface .jp-toggles {
+  margin: 0;
+  list-style: none;
+  *zoom: 1;
+}
+.jp-interface .jp-controls:before, .jp-interface .jp-controls:after, .jp-interface .jp-toggles:before, .jp-interface .jp-toggles:after {
+  display: table;
+  content: "";
+}
+.jp-interface .jp-controls:after, .jp-interface .jp-toggles:after {
+  clear: both;
+}
+.jp-interface .jp-controls a, .jp-interface .jp-toggles a {
+  font-size: 20px;
+}
+.jp-interface .jp-controls .jp-mute,
+.jp-interface .jp-controls .jp-unmute,
+.jp-interface .jp-controls .jp-volume-max, .jp-interface .jp-toggles .jp-mute, .jp-interface .jp-toggles .jp-unmute, .jp-interface .jp-toggles .jp-volume-max {
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  text-indent: -11px;
+  position: absolute;
+  color: #888;
+}
+.jp-interface .jp-controls .jp-mute:before,
+.jp-interface .jp-controls .jp-unmute:before,
+.jp-interface .jp-controls .jp-volume-max:before, .jp-interface .jp-toggles .jp-mute:before, .jp-interface .jp-toggles .jp-unmute:before, .jp-interface .jp-toggles .jp-volume-max:before {
+  text-indent: 16px;
+}
+.jp-interface .jp-controls .jp-mute,
+.jp-interface .jp-controls .jp-unmute, .jp-interface .jp-toggles .jp-mute, .jp-interface .jp-toggles .jp-unmute {
+  top: -6px;
+  left: 0;
+}
+.jp-interface .jp-controls .jp-volume-max, .jp-interface .jp-toggles .jp-volume-max {
+  top: -6px;
+  right: 0;
+}
+.jp-interface .jp-controls li, .jp-interface .jp-toggles li {
+  width: 50%;
+  display: inline;
+  float: left;
+}
+.jp-interface .jp-controls .jp-play,
+.jp-interface .jp-controls .jp-pause,
+.jp-interface .jp-controls .jp-stop, .jp-interface .jp-toggles .jp-play, .jp-interface .jp-toggles .jp-pause, .jp-interface .jp-toggles .jp-stop {
+  color: #111;
+  line-height: 34px;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  white-space: nowrap;
+  text-indent: 100%;
+  border: 1px solid #141414;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.2);
+  background-color: #474747;
+  background-image: -moz-linear-gradient(top, #555555, #333333);
+  background-image: -ms-linear-gradient(top, #555555, #333333);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#555555), to(#333333));
+  background-image: -webkit-linear-gradient(top, #555555, #333333);
+  background-image: -o-linear-gradient(top, #555555, #333333);
+  background-image: linear-gradient(top, #555555, #333333);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555555', endColorstr='#333333', GradientType=0), #555555, #333333;
+}
+.jp-interface .jp-controls .jp-play:before,
+.jp-interface .jp-controls .jp-pause:before,
+.jp-interface .jp-controls .jp-stop:before, .jp-interface .jp-toggles .jp-play:before, .jp-interface .jp-toggles .jp-pause:before, .jp-interface .jp-toggles .jp-stop:before {
+  text-indent: -100%;
+}
+.jp-interface .jp-controls .jp-play:hover,
+.jp-interface .jp-controls .jp-pause:hover,
+.jp-interface .jp-controls .jp-stop:hover, .jp-interface .jp-toggles .jp-play:hover, .jp-interface .jp-toggles .jp-pause:hover, .jp-interface .jp-toggles .jp-stop:hover {
+  background-color: #404040;
+  background-image: -moz-linear-gradient(top, #333333, #555555);
+  background-image: -ms-linear-gradient(top, #333333, #555555);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#555555));
+  background-image: -webkit-linear-gradient(top, #333333, #555555);
+  background-image: -o-linear-gradient(top, #333333, #555555);
+  background-image: linear-gradient(top, #333333, #555555);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#555555', GradientType=0), #333333, #555555;
+}
+.jp-interface .jp-controls .jp-play, .jp-interface .jp-controls .jp-pause, .jp-interface .jp-toggles .jp-play, .jp-interface .jp-toggles .jp-pause {
+  border-right: none;
+}
+.jp-interface .jp-controls .jp-stop, .jp-interface .jp-toggles .jp-stop {
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+}
+.jp-interface .jp-volume-bar {
+  top: 20px;
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  overflow: hidden;
+  position: absolute;
+  padding: 2px 0 1px;
+  background: #141414;
+}
+.jp-interface .jp-volume-bar .jp-volume-bar-value {
+  height: 3px;
+  background: #7a7a7a;
+  -webkit-box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+  -moz-box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+}
+.jp-interface .jp-progress {
+  width: 100%;
+  height: 13px;
+  overflow: hidden;
+  background: #4d4d4d;
+  padding: 0 0 2px 0;
+  margin-bottom: 7px;
+  position: relative;
+}
+.jp-interface .jp-progress .jp-seek-bar {
+  height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: #161616;
+}
+.jp-interface .jp-progress .jp-play-bar {
+  height: 100%;
+  background-color: #6c6c6c;
+  background-image: -moz-linear-gradient(top, #848484, #4a4a4a);
+  background-image: -ms-linear-gradient(top, #848484, #4a4a4a);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#848484), to(#4a4a4a));
+  background-image: -webkit-linear-gradient(top, #848484, #4a4a4a);
+  background-image: -o-linear-gradient(top, #848484, #4a4a4a);
+  background-image: linear-gradient(top, #848484, #4a4a4a);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#848484', endColorstr='#4a4a4a', GradientType=0), #848484, #4a4a4a;
+}
+.jp-interface .jp-current-time, .jp-interface .jp-duration {
+  color: #888;
+  font-size: 12px;
+  font-weight: bold;
+}
+.jp-interface .jp-current-time {
+  display: inline;
+  float: left;
+}
+.jp-interface .jp-duration {
+  display: inline;
+  float: right;
+}
+.jp-interface .jp-toggles {
+  width: 25px;
+  margin: 0 auto;
+  list-style: none;
+  overflow: hidden;
+  text-align: center;
+}
+.jp-interface .jp-toggles li {
+  width: 100%;
+}
+.jp-interface .jp-toggles a {
+  color: #888;
+  height: 25px;
+  overflow: hidden;
+  text-indent: 35px;
+  white-space: nowrap;
+}
+.jp-interface .jp-toggles a:before {
+  position: relative;
+  left: -30px;
+}
+.jp-interface .jp-toggles .jp-repeat-off {
+  background: #eee;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+  -moz-box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+}
+
+.jp-title {
+  margin: 10px 0;
+  text-align: center;
+  font-weight: bold;
+}
+.jp-title ul {
+  list-style: none;
+  margin: 0;
+}
+
+/**
+ * Default DropKick theme
+ *
+ * Feel free to edit the default theme
+ * or even add your own.
+ *
+ * See the readme for themeing help
+ *
+ */
+/***** Begin Theme, feel free to edit in here! ******/
+select {
+  width: 165px;
+}
+
+/* One container to bind them... */
+.dk_container {
+  background: #fff;
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 18px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.dk_container:focus {
+  outline: 0;
+}
+
+.dk_container a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Opens the dropdown and holds the menu label */
+.dk_toggle {
+  /**
+   * Help: Arrow image not appearing
+   * Try updating this property to your correct dk_arrows.png path
+   */
+  line-height: 28px;
+  border: 1px solid #ddd;
+  padding: 0 12px 0 15px;
+  text-shadow: #fff 1px 1px 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.dk_toggle:after {
+  float: right;
+  padding-left: 12px;
+  border-left: 1px solid #ddd;
+}
+
+.dk_toggle:hover {
+  border-color: #c4c4c4;
+}
+
+/* Applied when the dropdown is focused */
+.dk_focus .dk_toggle {
+  border-color: #aaaaaa;
+}
+
+/* Applied whenever the dropdown is open */
+.dk_open {
+  /**
+   * Help: Dropdown menu is covered by something
+   * Try setting this value higher
+   */
+  z-index: 40;
+}
+
+/* The outer container of the options */
+.dk_options a {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 5px 15px;
+}
+
+.dk_options li:last-child a {
+  border-bottom: none;
+}
+
+.dk_options a:hover,
+.dk_option_current a {
+  text-decoration: none;
+  background-color: #dcdcdc;
+}
+
+/* Inner container for options, this is what makes the scrollbar possible. */
+.dk_options_inner {
+  margin: 0;
+  max-height: 250px;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 0 0 3px 3px;
+  -moz-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+}
+
+/* Set a max-height on the options inner */
+.dk_options_inner,
+.dk_touch .dk_options {
+  max-height: 250px;
+}
+
+/******  End Theme ******/
+/***** Critical to the continued enjoyment of working dropdowns ******/
+.dk_container {
+  display: none;
+  float: left;
+  position: relative;
+}
+
+.dk_container a {
+  outline: 0;
+}
+
+.dk_toggle {
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  position: relative;
+  zoom: 1;
+}
+
+.dk_open {
+  position: relative;
+}
+
+.dk_open .dk_options {
+  display: block;
+}
+
+.dk_open .dk_label {
+  color: inherit;
+}
+
+.dk_options {
+  display: none;
+  margin-top: -1px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+.dk_options a,
+.dk_options a:link,
+.dk_options a:visited {
+  display: block;
+}
+
+.dk_options_inner {
+  overflow: auto;
+  position: relative;
+}
+
+.dk_touch .dk_options {
+  overflow: hidden;
+}
+
+.dk_touch .dk_options_inner {
+  max-height: none;
+  overflow: visible;
+}
+
+
+
+/***** End Critical to the continued enjoyment of working dropdowns ******/

@@ -1,0 +1,59 @@
+.post-list
+        
+  - productlist = Array.new
+  - productlist[0] = {:title => 'More bigger than usual cart in the world of 3D movies', :sale => true, :price => '$45', :rating => 1}
+  - productlist[1] = {:title => 'Carat diamond oval ring for special wedding', :price => '$138.65', :rating => 3}
+  - productlist[2] = {:title => 'Cupcake set for family gathering', :price => '$18', :rating => 1}
+  - productlist[3] = {:title => 'Casual dress for skinny modern woman', :price => '$180', :rating => 1}
+  - productlist[4] = {:title => 'Carat diamond oval ring for special wedding', :price => '$138.65', :rating => 3}
+  - productlist[5] = {:title => 'Carat diamond oval ring for special wedding', :price => '$138.65', :rating => 3}
+  - productlist[6] = {:title => 'Cupcake set for family gathering', :price => '$18', :rating => 1}
+  - productlist[7] = {:title => 'Casual dress for skinny modern woman', :price => '$180', :rating => 1}
+  - productlist[8] = {:title => 'Carat diamond oval ring for special wedding', :price => '$138.65', :rating => 3}        
+  - productlist[9] = {:title => 'Carat diamond oval ring for special wedding', :price => '$138.65', :rating => 3}
+  - productlist[10] = {:title => 'Cupcake set for family gathering', :price => '$18', :sale => true, :rating => 1}
+  - productlist[11] = {:title => 'Carat diamond oval ring for special wedding', :price => '$138.65', :rating => 3}
+  - productlist[12] = {:title => 'Casual dress for skinny modern woman', :price => '$180', :rating => 1}
+  - productlist[13] = {:title => 'Cupcake set for family gathering', :price => '$18', :rating => 1}
+  - productlist[14] = {:title => 'Cupcake set for family gathering', :price => '$18', :rating => 1}
+  - productlist[12] = {:title => 'Casual dress for skinny modern woman', :price => '$180', :rating => 1}
+
+
+  - productlist.each do |product|
+    - @sale = product[:sale] ? 'sale' : ''
+    %article.product{:class => "#{@sale}"}
+      .innercontainer
+        .post-header
+          .entry-thumb
+            %img{:src => lorem.image("270x180")}
+          %a.entry-link.add-to-cart(href="#") Add to cart
+          %a.entry-link.more-link(href="#") See this item
+
+        %header.entry-header
+          %h2
+            %a(href="#")= product[:title]
+
+        .entry-content
+          %ul.post-meta
+            - if product[:sale]
+              %li<
+                From: 
+                %del $90
+                %span.price-tag= product[:price]
+            - else
+              %li<
+                Price: 
+                %span.price-tag= product[:price]
+                
+            %li<
+              Categories: 
+              %a(href="#") Family,
+              %a(href="#") Woman
+
+        %footer.entry-footer
+          %time.datetime(datetime="2012-04-01") About 8 hours ago
+          .star-rating
+            - product[:rating].times do
+              %span.star.lit
+            - (5 - product[:rating]).times do
+              %span.star

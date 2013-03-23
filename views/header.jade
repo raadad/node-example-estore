@@ -1,0 +1,84 @@
+header.navbar(role='navigation')
+  .navbar-inner
+    .container
+      .logo-container
+        //
+           Button toggle for mobile menu 
+        a.btn.btn-navbar(data-target='.nav-collapse', data-toggle='collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        //
+           Logo 
+        #logo
+          a.brand(href='/')
+          //  img(alt='Enabl', src='/images/logo.png')
+      //
+         Collapsible block for mobile enu 
+      nav.nav-collapse
+        //
+           Search Form 
+        //
+           Top Navigation 
+        ul.nav
+          img(src="/images/headx.png")
+        ul.social-stats.pull-right
+          div.navbar-search.pull-left
+            input#searchI.search-query(onkeypress="handleKeyPress(event,$('#searchI').val())",onsubmit="return false;",placeholder='Search', type='text')
+            input#searchB.btn(style="margin-bottom:6px;",type="button",onclick="search($('#searchI').val())",value="search")
+          li.icon-facebook-sign
+            a 500
+          li.icon-twitter-sign 2430
+//
+   /End Top Navigation Container 
+//
+   Breadcrumb Navbar 
+nav.subnav.subnav-fixed(role='breadcrumb')
+  .container
+    //
+       Breadcrumbs 
+    .breadcrumb
+      each name,lnx in ax.link
+        a(href=lnx) 
+          | #{name} 
+        a /
+
+    //
+       Cart Button 
+    .btn-group.cart-dropdown
+      a.btn.btn-cart(style="margin-top:2px;margin-left:21px;",href='/cart/') View Cart
+      ul#dcart.cart-product-list.dropdown-menu
+        li.cart-product
+          a(href='/cart/')
+            img(src='images/dummy/cart-product1.jpg')
+            | Pallagrino casual polo shirt for man and women
+          span.quantity
+            | 1 ×
+            span.amount $160
+        li
+          a(href='#')
+            img(src='images/dummy/cart-product2.jpg')
+            | Diamond oval ring for wedding
+          span.quantity
+            | 3 ×
+            span.amount $160
+        li.total
+          .total-block
+            strong Subtotal:
+            span.amount $340
+        li.buttons
+          a.cart(href='#')
+            span View Cart →
+          a.checkout(href='#')
+            span Checkout →
+  //
+    img.btn-group(src="/images/u1.png")        
+    img.btn-group(src="/images/u2.png")
+    img.btn-group(src="/images/u3.png")     
+    img.btn-group(src="/images/u4.png") 
+    
+//
+   /End Breadcrumb Navbar 
+//
+   Slider container 
+
