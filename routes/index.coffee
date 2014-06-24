@@ -4,16 +4,16 @@ root.ap = {} if !root.ap?
 
 exports.index = (req,res) ->
 	req.conf.link = {"/":"Home"}
-	res.render 'index' , ax:req.conf ,displayItems:root.getFeaturedItems() , _:_ 
+	res.render 'index' , ax:req.conf ,displayItems:root.getFeaturedItems() , _:_
 
 exports.cart = (req,res) ->
 	req.conf.link = {"/":"Home",about:"Cart"}
-	res.render 'cart' , ax:req.conf,  
+	res.render 'cart' , ax:req.conf,
 
 exports.complete = (req,res) ->
 	req.conf.link = {"/":"Home",about:"Complete"}
-	res.render 'complete' , ax:req.conf,  
-	root.store[req.session.id] = 
+	res.render 'complete' , ax:req.conf,
+	root.store[req.session.id] =
 		sid: req.session.id
 		count:0  unless  root.store[req.session.id]?
 		cart:[]

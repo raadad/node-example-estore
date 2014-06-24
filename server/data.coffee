@@ -1,4 +1,4 @@
-exports.items = 
+exports.items =
 	SLFJS501:
 		id:1
 		name:"Javascript"
@@ -14,7 +14,7 @@ exports.items =
 		sku:"SLFHS202"
 		product_description:"Haskell (/ˈhæskəl/)[17] is a standardized, general-purpose purely functional programming language, with non-strict semantics and strong static typing.[18] It is named after logician Haskell Curry."
 		category:[
-			"Functional Programming"]			
+			"Functional Programming"]
 	SFJHS203:
 		id:3
 		name:"Spring"
@@ -22,7 +22,7 @@ exports.items =
 		sku:"SFJHS203"
 		product_description:"The Spring Framework is an open source application framework and inversion of control container for the Java platform."
 		category:[
-			"Java Frameworks"]		
+			"Java Frameworks"]
 	SFJHS204:
 		id:4
 		name:"NodeJs"
@@ -30,7 +30,7 @@ exports.items =
 		sku:"SFJHS204"
 		product_description:"Node.js is a server-side software system designed for writing scalable Internet applications, notably web servers.[1] Programs are written on the server side in JavaScript, using event-driven, asynchronous I/O to minimize overhead and maximize scalability."
 		category:[
-			"Runtimes"]	
+			"Runtimes"]
 	SFJHS295:
 		id:5
 		name:"Jenkins"
@@ -38,7 +38,7 @@ exports.items =
 		sku:"SFJHS295"
 		product_description:"Jenkins is an open source continuous integration tool written in Java. The project was forked from Hudson after a dispute with Oracle, which claims the right to trademark the Hudson name and has applied for such a trademark as of December 2010"
 		category:[
-			"Tools"]	
+			"Tools"]
 	SFJHS296:
 		id:6
 		name:"Mocha"
@@ -46,7 +46,7 @@ exports.items =
 		product_description:"Mocha is a feature-rich JavaScript test framework running on node and the browser, making asynchronous testing simple and fun. Mocha tests run serially, allowing for flexible and accurate reporting, while mapping uncaught exceptions to the correct test cases. Hosted on GitHub."
 		sku:"SFJHS296"
 		category:[
-			"Tools"]		
+			"Tools"]
 	SFJHS297:
 		id:7
 		name:"Hibernate"
@@ -54,7 +54,7 @@ exports.items =
 		product_description:"Hibernate is an object-relational mapping (ORM) library for the Java language, providing a framework for mapping an object-oriented domain model to a traditional relational database. Hibernate solves object-relational impedance mismatch problems by replacing direct persistence-related database accesses with high-level object handling functions."
 		sku:"SFJHS297"
 		category:[
-			"Java Frameworks"]		
+			"Java Frameworks"]
 	SFJHS298:
 		id:8
 		name:"Express"
@@ -80,7 +80,7 @@ exports.items =
 		category:[
 			"Runtimes"]
 
-exports.categories = 
+exports.categories =
 	Languages:
 		"Functional Programming":{}
 	Frameworks:

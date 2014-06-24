@@ -64,9 +64,6 @@ app.configure ->
 	app.use express.cookieParser("ftp");
 	app.use express.session secret:"ftp"
 	app.use routes.prepare
-	
-
-
 	app.use app.router
 
 
@@ -91,7 +88,7 @@ io.sockets.on 'connection' , (socket,a,b,c) ->
 		socket.on 'comm' , (sid,method,payload) ->
 			console.log sid,method,payload
 			if root.store[sid]
-				root.meth[method](socket,root.store[sid],payload)
+					root.meth[method](socket,root.store[sid],payload)
 
 
 
@@ -103,13 +100,6 @@ io.sockets.on 'connection' , (socket,a,b,c) ->
 ###################################
 
 
-if env == "prod"
-	server.listen 3214
-	console.log "Running #{env} on port 3214"
 
-else if env == "show"
-	server.listen 80
-	console.log "Running #{env} on port 80"
-else
-	server.listen 3000
-	console.log "Running #{env} on port 3000"
+server.listen 8083
+console.log "Running #{env} on port 8083"
